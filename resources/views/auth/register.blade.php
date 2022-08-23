@@ -14,18 +14,7 @@
 
             <!-- Name -->
             <div>
-<<<<<<< HEAD
                 <x-label for="name" :value="__('Name')" />
-=======
-                <x-label for="dni" :value="__('DNI/NIE')" />
-
-                <x-input id="dni" class="block mt-1 w-full" type="text" name="dni" :value="old('dni')" required autofocus />
-            </div>
-
-            
-            <div>
-                <x-label for="name" :value="__('Nombre')" />
->>>>>>> paz
 
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
             </div>
@@ -39,11 +28,7 @@
 
             <!-- Password -->
             <div class="mt-4">
-<<<<<<< HEAD
                 <x-label for="password" :value="__('Password')" />
-=======
-                <x-label for="password" :value="__('Contraseña')" />
->>>>>>> paz
 
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
@@ -53,11 +38,7 @@
 
             <!-- Confirm Password -->
             <div class="mt-4">
-<<<<<<< HEAD
                 <x-label for="password_confirmation" :value="__('Confirm Password')" />
-=======
-                <x-label for="password_confirmation" :value="__('Confirma la contraseña')" />
->>>>>>> paz
 
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                 type="password"
@@ -66,19 +47,11 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-<<<<<<< HEAD
                     {{ __('Already registered?') }}
                 </a>
 
                 <x-button class="ml-4">
                     {{ __('Register') }}
-=======
-                    {{ __('Ya te encuentras registrado?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Registrarme') }}
->>>>>>> paz
                 </x-button>
             </div>
         </form>
