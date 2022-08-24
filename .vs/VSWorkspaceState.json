@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\public",
+    "\\resources",
+    "\\resources\\views",
+    "\\resources\\views\\auth"
+  ],
+  "SelectedNode": "\\resources\\views\\auth\\confirm-password.blade.php",
+  "PreviewInSolutionExplorer": false
+}
