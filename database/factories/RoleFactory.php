@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class RolFactory extends Factory
+class RoleFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,7 +14,7 @@ class RolFactory extends Factory
     public function definition()
     {
         return [
-            'role' => $this->faker->name(),
+           
         ];
     }
 }
