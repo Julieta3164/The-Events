@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class RolUserFactory extends Factory
+class RoleUserFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,7 +14,7 @@ class RolUserFactory extends Factory
     public function definition()
     {
         return [
-
+            //
         ];
     }
 }

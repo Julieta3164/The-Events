@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use App\Models\Event;
+use App\Models\Role;
 use Illuminate\Database\Seeder;
 
-class EventSeeder extends Seeder
+class RoleSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,6 +14,6 @@ class EventSeeder extends Seeder
      */
     public function run()
     {
-        Event::factory(10)->create();
+        Role::factory(10)->create();
     }
 }

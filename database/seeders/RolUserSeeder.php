@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Rol_User;
+use App\Models\RolUser;
 use Illuminate\Database\Seeder;
 
 class RolUserSeeder extends Seeder
@@ -14,6 +14,6 @@ class RolUserSeeder extends Seeder
      */
     public function run()
     {
-        Rol_User::factory(10)->create();
+
     }
 }

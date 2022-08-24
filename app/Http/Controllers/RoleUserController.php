@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class RolUserController extends Controller
+class RoleUserController extends Controller
 {
     //
 }
