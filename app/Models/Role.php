@@ -17,7 +17,9 @@ class Role extends Model
     protected $fillable = ['role'];
     public $timestamps = false;
 
+
     public function users(){
         return $this->belongsToMany(User::class, 'role_user', 'roles_id', 'users_id');
     }
+
 }
