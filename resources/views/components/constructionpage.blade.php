@@ -20,49 +20,15 @@
             }
         </style>
     </head>
-    <body class="antialiased">
-    <header>
-        <div class="card">
-            <h5 class="card-header">Featured</h5>
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            
-         
-         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Panel Personal</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Inicia Sesión</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Regístrate</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center mt-4 sm:item-center sm:justify-between">
-                    <div class="text-center test-sm text-gray-500 sm:text-left">
-                        <h1>{{$role->role}}</h1>
-                            @foreach ($role->users as $user)
-                                <h2>@continue ($user->type == 1)
-                                        {{ $user->name}}</h2>
-                            @endforeach
-                    </div>
-                </div>
-            </div>
-
-
-           
-                
-          
-            
-                
-          
+    <body>
+<div class="text-center construction">
+    <h2 id='constructionH2'>Estamos trabajando para tener listo el sitio web pronto.</h1>
+        <br>
+    <p id=constructionParagraph>Nuestro desarrollador inmaculado John W. Martinez, está haciendo su mayor esfuerzo para finalizar el sitio web antes que este conteo termine. <br> Favor, tenedle paciencia. <b>(Es mentira lo de inmaculado, lo tenemos amarrado a una mazmorra y lo azotamos para que trabaje 20 horas al día).</b></p>
+</div>
+<div class="text-center construction">
+    <img id="constructionImg" src="{{ asset('./img/cons.jpg') }}" />
+</div>
 
     </body>
 </html>
