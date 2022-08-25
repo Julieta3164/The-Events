@@ -29,5 +29,6 @@
 <div class="text-center construction">
     <img id="constructionImg" src="{{ asset('./img/cons.jpg') }}" />
 </div>
+
     </body>
 </html>
