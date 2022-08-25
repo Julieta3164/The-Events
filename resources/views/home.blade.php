@@ -22,7 +22,8 @@
     </head>
     <body>
 <div>
-<span>hola</span>
+    <h1>Estamos trabajando para tener listo el sitio web pronto.</h1>
+    <p>Nuestro desarrollador inmaculado John W. Martinez, está haciendo su mayor esfuerzo para finalizar el sitio web antes que este conteo termine. Favor, tenedle paciencia. (Es mentira lo de inmaculado, lo tenemos amarrado a una mazmorra y lo azotamos para que trabaje 20 horas al día).</p>
 </div>
     </body>
 </html>
