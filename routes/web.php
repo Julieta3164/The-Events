@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\add;
+use App\Http\Controllers\create;
+use App\Http\Controllers\description;
 use App\Http\Controllers\home;
 use App\Models\Role;
 use App\Models\User;
@@ -29,3 +32,6 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::get('/home', [home::class, 'index']);
+Route::get('/add', [add::class, 'index']);
+Route::get('/description', [description::class, 'index']);
+Route::get('/create', [create::class, 'index']);
