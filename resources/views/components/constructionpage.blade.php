@@ -21,15 +21,13 @@
         </style>
     </head>
     <body>
-<div>
-    <h1>Estamos trabajando para tener listo el sitio web pronto.</h1>
-    <p>Nuestro desarrollador inmaculado John W. Martinez, está haciendo su mayor esfuerzo para finalizar el sitio web antes que este conteo termine. Favor, tenedle paciencia. (Es mentira lo de inmaculado, lo tenemos amarrado a una mazmorra y lo azotamos para que trabaje 20 horas al día).</p>
+<div class="text-center construction">
+    <h2 id='constructionH2'>Estamos trabajando para tener listo el sitio web pronto.</h1>
+        <br>
+    <p id=constructionParagraph>Nuestro desarrollador inmaculado John W. Martinez, está haciendo su mayor esfuerzo para finalizar el sitio web antes que este conteo termine. <br> Favor, tenedle paciencia. <b>(Es mentira lo de inmaculado, lo tenemos amarrado a una mazmorra y lo azotamos para que trabaje 20 horas al día).</b></p>
 </div>
-<div>
-
-  
-    <img src="{{ asset('./img/logo.png') }}" />
-    
+<div class="text-center construction">
+    <img id="constructionImg" src="{{ asset('./img/cons.jpg') }}" />
 </div>
     </body>
 </html>
