@@ -15,7 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-             $table->unsignedBigInteger('event_id');  
+      /*        $table->unsignedBigInteger('event_id');   */
             $table->string('name');
 
             $table->string('email')->unique();
@@ -23,8 +23,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-
-            $table->foreign('event_id')->references('id')->on('events');  
+/* 
+            $table->foreign('event_id')->references('id')->on('events');   */
         });
     }
 
