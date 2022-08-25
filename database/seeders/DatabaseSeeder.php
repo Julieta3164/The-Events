@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         }
 
             foreach (User::all() as $user){
-                $roles = Role::take(1)->pluck('id');
+                $roles = Role::take(1)->pluck('id')->except(User::take(1)->pluck('id'));
                 $user->roles()->attach($roles);
             } 
     }
