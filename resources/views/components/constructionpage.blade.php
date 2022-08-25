@@ -26,7 +26,10 @@
     <p>Nuestro desarrollador inmaculado John W. Martinez, está haciendo su mayor esfuerzo para finalizar el sitio web antes que este conteo termine. Favor, tenedle paciencia. (Es mentira lo de inmaculado, lo tenemos amarrado a una mazmorra y lo azotamos para que trabaje 20 horas al día).</p>
 </div>
 <div>
-    <img src="{{ asset('./img/cons.jpg') }}" />
+
+  
+    <img src="{{ asset('./img/logo.png') }}" />
+    
 </div>
     </body>
 </html>
