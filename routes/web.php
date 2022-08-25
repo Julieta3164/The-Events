@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $role = Role::find(1);
+    $role = Role::find(2);
     return view('welcome', compact('role'));
 });
 
