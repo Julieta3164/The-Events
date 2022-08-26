@@ -35,3 +35,11 @@ Route::get('/home', [home::class, 'index']);
 Route::get('/add', [add::class, 'index']);
 Route::get('/description', [description::class, 'index']);
 Route::get('/create', [create::class, 'index']);
+
+Route::get('/home', [App\Http\Controllers\EventController::class, 'index'])->name('home');
+Route::get('event/create', [App\Http\Controllers\EventController::class, 'create']);
+Route::post('event', [App\Http\Controllers\EventController::class, 'store']);
+Route::get('event/{event}/edit', [App\Http\Controllers\EventController::class, 'edit']);
+Route::get('event/{event}', [App\Http\Controllers\EventController::class, 'show']);
+Route::put('event/{event}', [App\Http\Controllers\EventController::class, 'update']);
+Route::delete('event/{event}', [App\Http\Controllers\EventController::class, 'destroy']);
