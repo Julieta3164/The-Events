@@ -39,7 +39,11 @@
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center mt-4 sm:item-center sm:justify-between">
                     <div class="text-center test-sm text-gray-500 sm:text-left">
-                        
+                        <h1>{{$role->role}}</h1>
+                            @foreach ($role->users as $user)
+                                <h2>@continue ($user->type == 1)
+                                        {{ $user->name}}</h2>
+                            @endforeach
                     </div>
                 </div>
             </div>
