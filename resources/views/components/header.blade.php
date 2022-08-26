@@ -10,6 +10,10 @@
 </head>
 <body>
 <header>
+    <div>
+        <img id="header" src="{{ asset('./img/logo.png') }}" />
+    </div>
+
         @if (Route::has('login'))
             <div class="btg">
                 @auth
