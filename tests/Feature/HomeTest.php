@@ -8,7 +8,7 @@ class HomeTest extends TestCase
     
     public function test_description_screen_can_be_rendered()
     {
-        $response = $this->get('/home');
+        $response = $this->get('/');
 
         $response->assertStatus(200);
     }
