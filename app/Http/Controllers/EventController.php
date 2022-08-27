@@ -7,70 +7,48 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $events = Event::all();
 
-        return view('home', compact('events'));
+        return view('events.index')->with('events', $events);
     }
+        public function store(Request $request) 
+        {
+            $validated = $request-> validate([
+                'title' => 'required',
+                'image' => 'required',
+                'description' => 'required',
+                'date' => 'required',
+                'time' => 'required',
+                'people' => 'required',
+            ]);
 
-    public function create()
-    {
-        return view('events.create');
-    }
+            Event::create($validated);
 
-    public function store(Request $request)
+            return redirect()->route('events.index')->with('message', 'Evento creado!');
+        } 
+        
+            public function edit(Event $event)
+        {
+            return view('events.edit')->with('event', $event);
+        }
+
+        public function update(Request $request, Event $event)
     {
-        $request->validate([
+        $validated = $request->validate([
             'title' => 'required',
             'image' => 'required',
-            'description' => 'requided',
+            'description' => 'required',
+            'date' => 'required',
             'time' => 'required',
-            'date' => 'required'
-            ]);
-        $event = new Event();
-        $event->title = $request->title;
-        $event->image = $request->image;
-        $event->description = $request->description;
-        $event->time = $request->time;
-        $event->date = $request->date;
+            'people' => 'required',
+        ]);
 
-        $event ->save();
-        return redirect('/home')->with('success','Event created successfully!');
+        $event->update($validated);
+
+        return redirect()->route('events.index')->with('message', 'Evento actualizado con éxito!');
     }
 
-    public function show(Event $event)
-    {
-        return view('posts.show', compact('post'));
-    }
-
-    public function edit(Event $event)
-    {
-        return view('posts.edit', compact('post'));
-    }
-
-    public function update(Event $event, Request $request)
-    {
-        $request->validate([
-            'title' => 'required',
-            'image' => 'required',
-            'description' => 'requided',
-            'time' => 'required',
-            'date' => 'required'
-            ]);
-            $event->title = $request->title;
-            $event->image = $request->image;
-            $event->description = $request->description;
-            $event->time = $request->time;
-            $event->date = $request->date;
-
-        $event->save();
-        return redirect('/home')->with('success','Event updated successfully!');
-    }
-
-    public function destroy(Event $event)
-    {
-        $event->delete();
-        return redirect('/home')->with('success','Event deleted successfully!');
-    }
 }
 

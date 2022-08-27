@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Event;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -25,6 +26,10 @@ class DatabaseSeeder extends Seeder
                 $roles = Role::take(1)->pluck('id');
                 $user->roles()->attach($roles);
             }
-        
+            
+        $events = [];
+        foreach ($events as $event){
+            Event::create(['event' => $event]);
+        }
     }
 }

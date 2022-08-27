@@ -1,11 +1,6 @@
 <?php
 
-use App\Http\Controllers\add;
-use App\Http\Controllers\create;
-use App\Http\Controllers\description;
-use App\Http\Controllers\home;
-use App\Models\Role;
-use App\Models\User;
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('welcome');
+});
 
-    $role = Role::find(1);
-    return view('welcome', compact('role'));
+Route::get('/create', function () {
+    return view('events.create');
 });
 
 Route::get('/dashboard', function () {
@@ -31,15 +28,12 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/home', [home::class, 'index']);
-Route::get('/add', [add::class, 'index']);
-Route::get('/description', [description::class, 'index']);
-Route::get('/create', [create::class, 'index']);
+Route::get('/events/create', function () {
+    return view('events.create');
+})->middleware('auth')->name('events.create');
 
-Route::get('/home', [App\Http\Controllers\EventController::class, 'index'])->name('home');
-Route::get('event/create', [App\Http\Controllers\EventController::class, 'create']);
-Route::post('event', [App\Http\Controllers\EventController::class, 'store']);
-Route::get('event/{event}/edit', [App\Http\Controllers\EventController::class, 'edit']);
-Route::get('event/{event}', [App\Http\Controllers\EventController::class, 'show']);
-Route::put('event/{event}', [App\Http\Controllers\EventController::class, 'update']);
-Route::delete('event/{event}', [App\Http\Controllers\EventController::class, 'destroy']);
+Route::get('/events', [EventController::class, 'index'])->middleware('auth')->name('events.index');
+
+Route::get('/events/{event}/edit', [EventController::class, 'edit'])->middleware('auth')->name('events.edit');
+
+Route::put('/events/{event}', [EventController::class, 'update'])->middleware('auth')->name('events.update');
