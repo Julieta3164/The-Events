@@ -1,1 +1,1 @@
-<x-constructionpage/>
+<x-header/>

@@ -24,10 +24,11 @@
 <div class="text-center construction">
     <h2 id='constructionH2'>Estamos trabajando para tener listo el sitio web pronto.</h1>
         <br>
-    <p id=constructionParagraph>Nuestro desarrollador inmaculado John W. Martinez, está haciendo su mayor esfuerzo para finalizar el sitio web antes que este conteo termine. <br> Favor, tenedle paciencia. <b>(Es mentira lo de inmaculado, lo tenemos amarrado a una mazmorra y lo azotamos para que trabaje 20 horas al día).</b></p>
+    <p id=constructionParagraph>Nuestro desarrollador inmaculado John W. Martinez, está haciendo su mayor esfuerzo para finalizar el sitio web. <br> Por Favor, tenedle paciencia. <b>(Es mentira lo de inmaculado, Tenemos a Paz amarrada a una mazmorra y la azotamos para que haga Test 20 horas al día).</b></p>
 </div>
 <div class="text-center construction">
     <img id="constructionImg" src="{{ asset('./img/cons.jpg') }}" />
 </div>
+
     </body>
 </html>

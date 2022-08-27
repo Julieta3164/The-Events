@@ -18,9 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/create', function () {
-    return view('events.create');
+Route::get('/testing', function () {
+
+    $role = Role::find(1);
+    return view('testing', compact('role'));
 });
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -28,6 +31,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
+<<<<<<< HEAD
 Route::get('/events/create', function () {
     return view('events.create');
 })->middleware('auth')->name('events.create');
@@ -37,3 +41,9 @@ Route::get('/events', [EventController::class, 'index'])->middleware('auth')->na
 Route::get('/events/{event}/edit', [EventController::class, 'edit'])->middleware('auth')->name('events.edit');
 
 Route::put('/events/{event}', [EventController::class, 'update'])->middleware('auth')->name('events.update');
+=======
+/* Route::get('/home', [home::class, 'index']); */
+Route::get('/add', [add::class, 'index']);
+Route::get('/description', [description::class, 'index']);
+Route::get('/create', [create::class, 'index']);
+>>>>>>> marta3
