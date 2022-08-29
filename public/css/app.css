@@ -7,22 +7,69 @@
 
 .logo {
   position: relative;
-  display: flex;
-  justify-content: left;
 }
-
 .logo img {
+  position: absolute;
   width: 15vh;
-  margin-top: 1%;
-  margin-left: 1%;
+  margin-top: 2%;
+  margin-left: 2%;
 }
 
-.btn {
+@media (max-width: 600px) {
+  .cabecera {
+    position: absolute;
+    width: 98%;
+    height: 100px;
+    overflow: hidden;
+  }
+  .logo {
+    position: relative;
+  }
+  .logo img {
+    position: absolute;
+    width: 8vh;
+    padding-top: 4%;
+    padding-left: 2%;
+  }
+}
+.btn-header {
+  width: 30%;
+  margin-left: 80%;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  position: relative;
+  padding-top: 5%;
+}
+.btn-header button {
+  width: 30%;
+  background: #EB4603;
+  border: none;
+}
+.btn-header a {
+  color: white;
+  text-decoration: none;
 }
 
+@media (max-width: 600px) {
+  .btn-header {
+    width: 80%;
+    margin-left: 50%;
+    position: relative;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-header button {
+    width: 20%;
+    background: #EB4603;
+    border: none;
+    margin: 1%;
+  }
+  .btn-header a {
+    color: white;
+    font-size: 10px;
+    text-decoration: none;
+  }
+}
 .footer {
   position: absolute;
   width: 98%;
@@ -81,6 +128,56 @@
   font-size: 40px;
 }
 
+@media (max-width: 600px) {
+  .footer {
+    position: absolute;
+    width: 98%;
+    height: 60px;
+    overflow: hidden;
+  }
+  .conteiner {
+    display: flex;
+    align-items: center;
+  }
+  .copy {
+    position: relative;
+    margin-right: 8%;
+    padding: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .copy i {
+    color: white;
+    font-size: 6px;
+    padding-bottom: 10%;
+  }
+  .copy p {
+    color: white;
+    font-size: 6px;
+    padding-top: 10%;
+  }
+  .text {
+    position: relative;
+    justify-content: space-around;
+  }
+  .text h3 {
+    padding-top: 20%;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+  }
+  .icons {
+    padding-top: 1%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+  }
+  .icons i {
+    color: white;
+    font-size: 10px;
+  }
+}
 body {
   margin: 1%;
 }

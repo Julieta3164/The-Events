@@ -63,4 +63,63 @@
 
 
 
+    @media  (max-width: 600px){
+        .footer{
+            position: absolute;
+            width: 98%;
+            height: 60px;
+            overflow: hidden;
+        }
+        
+        .conteiner{
+            display: flex;
+            align-items: center;
+        }
+        
+        
+            .copy{
+                position: relative;
+                margin-right: 8%;
+                padding: 3%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+            i{
+                color: white;
+                font-size: 6px;
+                padding-bottom: 10%;
 
+            }
+            p{
+                color: white;
+                font-size: 6px;
+                padding-top: 10%;
+
+            }
+            }
+        
+        
+            .text{
+                position: relative;
+                justify-content: space-around;
+
+                h3{
+                    padding-top: 20%;
+                    text-align: center;
+                    color: white;
+                    font-size: 10px;
+                }
+            }
+        
+            .icons{
+                padding-top: 1%;
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+                i{
+                    color: white;
+                    font-size: 10px;
+                }
+            }
+    }
+    
