@@ -11,7 +11,7 @@ class EventController extends Controller
     {
         $events = Event::all();
 
-        return view('event.index')->with('events',$events);
+        return view('events.events', compact('events'));
     }
 
     public function create()
@@ -62,7 +62,7 @@ class EventController extends Controller
         $event->people = $request->get('people');
         $event->save();
 
-        return redirect('/articulos');
+        return redirect('/events');
     }
 
 }

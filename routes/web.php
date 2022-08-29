@@ -36,8 +36,8 @@ Route::get('/events/create', function () {
     return view('events.create');
 })->middleware('auth')->name('events.create');
 
-Route::get('/events/index', function () {
-    return view('events.index');
+Route::get('/events', function () {
+    return view('events.events')->name('events');
 });
 
-Route::resource('events', EventController::class);
+Route::resource('/events', EventController::class);
