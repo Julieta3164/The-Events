@@ -20,8 +20,8 @@
     <img id="img-header" src="{{ asset('./img/header.png') }}" />
   </div>
 
-<div class="container">
 
+<div class="conteiner">
 <div class="copy">
   <i class="bi bi-c-circle"></i>
   <p>2022 Company. Inc</p>

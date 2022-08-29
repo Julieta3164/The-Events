@@ -12,7 +12,7 @@
 }
 
 .logo img {
-  width: 25vh;
+  width: 15vh;
   margin-top: 1%;
   margin-left: 1%;
 }
@@ -30,15 +30,14 @@
   overflow: hidden;
 }
 
-.container {
-  position: relative;
-  color: white;
+.conteiner {
   display: flex;
-  font-size: 30px;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-end;
+  justify-content: flex-start;
 }
-.container .copy {
+
+.copy {
+  position: relative;
   margin-right: 20%;
   width: 33.33%;
   padding: 3%;
@@ -46,34 +45,40 @@
   align-items: flex-end;
   justify-content: flex-start;
 }
-.container .copy i {
+.copy i {
   color: white;
   font-size: 40px;
   padding: 3%;
 }
-.container .copy p {
+.copy p {
   color: white;
   font-size: 25px;
   padding: 3%;
 }
-.container .text {
-  width: 20%;
-  color: white;
-  display: flex;
-  font-size: 30px;
-  align-items: flex-end;
+
+.text {
+  position: relative;
+  width: 33.33%;
+  justify-content: space-around;
+  padding-right: 10%;
+  padding-bottom: 4%;
 }
-.container .icons {
-  margin-left: 20%;
-  justify-content: flex-end;
-  width: 20%;
+.text h3 {
   color: white;
-  display: flex;
-  font-size: 30px;
-  align-items: flex-end;
+  font-size: 40px;
 }
-.container .icons i {
-  margin: 3%;
+
+.icons {
+  padding-right: 10%;
+  padding-bottom: 4%;
+  position: relative;
+  width: 33.33%;
+  display: flex;
+  justify-content: space-around;
+}
+.icons i {
+  color: white;
+  font-size: 40px;
 }
 
 body {
