@@ -32,27 +32,37 @@ class EventController extends Controller
 
         return redirect('/events');
     } 
-        
-            public function edit(Event $event)
-        {
-            return view('events.edit')->with('event', $event);
-        }
 
-        public function update(Request $request, Event $event)
+        public function show($id)
     {
-        $validated = $request->validate([
-            'title' => 'required',
-            'image' => 'required',
-            'description' => 'required',
-            'date' => 'required',
-            'time' => 'required',
-            'people' => 'required',
-        ]);
+        //
+    }
 
-        $event->update($validated);
+    public function edit($id)
+    {
+         $event = Event::find($id);
+         return view('event.edit')->with('event',$event);
+    }
 
-        return redirect()->route('events.index')->with('message', 'Evento actualizado con éxito!');
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $event = Event::find($id);
+        $event->title = $request->get('title');
+        $event->description = $request->get('description');
+        // $events->image = $request->get('image');
+        $event->time = $request->get('time');
+        $event->date = $request->get('date');
+        $event->people = $request->get('people');
+        $event->save();
+
+        return redirect('/articulos');
     }
 
 }
-
