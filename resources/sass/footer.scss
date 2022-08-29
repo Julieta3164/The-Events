@@ -1,0 +1,63 @@
+.footer{
+    position: absolute;
+    width: 98%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.container{
+
+    position: relative;
+    color: white;
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: space-between;
+
+    .copy{
+        margin-right: 20%;
+        width: 33.33%;
+        padding: 3%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+    i{
+        color: white;
+        font-size: 40px;
+        padding: 3%;
+    }
+    p{
+        color: white;
+        font-size: 25px;
+        padding: 3%;
+    }
+    }
+
+    .text{
+        width: 20%;
+        color: white;
+        display: flex;
+        font-size: 30px;
+        align-items: flex-end;
+    }
+
+    .icons{
+        margin-left: 20%;
+        justify-content: flex-end;
+        width: 20%;
+        color: white;
+        display: flex;
+        font-size: 30px;
+        align-items: flex-end;
+        i{
+            margin: 3%;
+        }
+    }
+}
+
+
+
+
+
+
+
