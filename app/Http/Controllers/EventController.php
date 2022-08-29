@@ -11,23 +11,27 @@ class EventController extends Controller
     {
         $events = Event::all();
 
-        return view('events.index')->with('events', $events);
+        return view('event.index')->with('events',$events);
     }
-        public function store(Request $request) 
-        {
-            $validated = $request-> validate([
-                'title' => 'required',
-                'image' => 'required',
-                'description' => 'required',
-                'date' => 'required',
-                'time' => 'required',
-                'people' => 'required',
-            ]);
 
-            Event::create($validated);
+    public function create()
+    {
+            return view('events.create');
+    }
 
-            return redirect()->route('events.index')->with('message', 'Evento creado!');
-        } 
+    public function store(Request $request)
+    {
+        $events = new Event();
+        $events->title = $request->get('title');
+        $events->description = $request->get('description');
+        // $events->image = $request->get('image');
+        $events->time = $request->get('time');
+        $events->date = $request->get('date');
+        $events->people = $request->get('people');
+        $events->save();
+
+        return redirect('/events');
+    } 
         
             public function edit(Event $event)
         {

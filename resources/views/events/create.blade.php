@@ -23,7 +23,7 @@
                     </div>
                     @endif  
 
-                    <form method="GET">
+                    <form action="/events" method="POST">
                         @csrf
                         <div>
                             <x-label for="title" :value="__('Title')" />
@@ -31,12 +31,12 @@
                             <x-input id="title" class="block mt-1 w-full" type="text" name="title" :value="old('title')" required autofocus />
                         </div>
 
-                        <div class="mt-4 grid grid-flow-col grid-rows-1 grid-cols-2">
+                        {{-- <div class="mt-4 grid grid-flow-col grid-rows-1 grid-cols-2">
                             <div>
                                 <x-label for="price" :value="__('Image')" />
 
                                 <span>$ </span><x-input id="image" class="mt-1 w-20" type="image" name="image" :value="old('image')" required />
-                            </div>
+                            </div> --}}
                             <div class="mt-4 grid grid-flow-col grid-rows-1 grid-cols-2">
                                 <div>
                                     <x-label for="price" :value="__('Description')" />
