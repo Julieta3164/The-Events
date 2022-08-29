@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-header {
-  border: solid 1px black;
-  border-radius: 10px;
-  /*     background: rgb(53, 162, 73); */
-  width: 100vw;
-=======
 body {
   margin: 1%;
->>>>>>> a75c25f3841f2c99e819ccfbde0cc5f6169de919
 }
 
 .cabecera {
@@ -33,8 +25,4 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
-
-#constructionImg {
-  width: 100vh;
 }
