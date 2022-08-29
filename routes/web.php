@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EventController;
+use App\Models\Role;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('/testing', function () {
@@ -31,7 +32,6 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-<<<<<<< HEAD
 Route::get('/events/create', function () {
     return view('events.create');
 })->middleware('auth')->name('events.create');
@@ -41,9 +41,3 @@ Route::get('/events', [EventController::class, 'index'])->middleware('auth')->na
 Route::get('/events/{event}/edit', [EventController::class, 'edit'])->middleware('auth')->name('events.edit');
 
 Route::put('/events/{event}', [EventController::class, 'update'])->middleware('auth')->name('events.update');
-=======
-/* Route::get('/home', [home::class, 'index']); */
-Route::get('/add', [add::class, 'index']);
-Route::get('/description', [description::class, 'index']);
-Route::get('/create', [create::class, 'index']);
->>>>>>> marta3

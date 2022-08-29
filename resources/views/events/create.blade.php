@@ -1,5 +1,5 @@
 <x-app-layout>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Eventos') }}
@@ -23,7 +23,7 @@
                     </div>
                     @endif  
 
-                    <form method="POST" action="{{route('events.store')}}">
+                    <form method="GET">
                         @csrf
                         <div>
                             <x-label for="title" :value="__('Title')" />
