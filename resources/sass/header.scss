@@ -1,0 +1,27 @@
+body{
+    margin: 1%;
+}
+
+.cabecera{
+    position: absolute;
+    width: 98%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.logo{
+    position: relative;
+    display: flex;
+    justify-content: left;
+}
+.logo img{
+    width: 25vh;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+.btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}

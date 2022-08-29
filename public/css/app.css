@@ -1,24 +1,32 @@
+<<<<<<< HEAD
 header {
   border: solid 1px black;
   border-radius: 10px;
   /*     background: rgb(53, 162, 73); */
   width: 100vw;
+=======
+body {
+  margin: 1%;
+>>>>>>> a75c25f3841f2c99e819ccfbde0cc5f6169de919
 }
 
-.header {
-  display: flex;
-  width: 100vw;
-  justify-content: space-between;
+.cabecera {
+  position: absolute;
+  width: 98%;
+  height: 200px;
+  overflow: hidden;
 }
 
 .logo {
+  position: relative;
   display: flex;
   justify-content: left;
 }
 
 .logo img {
-  width: 10vh;
-  margin: 1%;
+  width: 25vh;
+  margin-top: 1%;
+  margin-left: 1%;
 }
 
 .btn {
