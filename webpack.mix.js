@@ -1,5 +1,6 @@
 const mix = require('laravel-mix');
 
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -11,6 +12,7 @@ const mix = require('laravel-mix');
  |
  */
 
+<<<<<<< HEAD
 
 
 
@@ -21,3 +23,11 @@ mix.js('resources/js/app.js', 'public/js').sass('resources/sass/app.scss', 'publ
 
 
 
+=======
+mix.js('resources/js/app.js', 'public/js').sass('resources/sass/app.scss', 'public/css', {}, [
+    require('tailwindcss'),
+    require('autoprefixer'),
+]);
+
+/* mix.sass('resources/sass/app.scss', 'public/css' )  */
+>>>>>>> marta3
