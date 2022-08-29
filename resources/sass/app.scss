@@ -1,8 +1,9 @@
 header{
     border: solid 1px black;
     border-radius: 10px;
-    background: rgb(53, 162, 73);
+/*     background: rgb(53, 162, 73); */
     width: 100vw;
+    background-image: url= "{{ asset('./img/logo.png') }}";
     
 }
 .header{
@@ -24,3 +25,4 @@ header{
     align-items: center;
     
 }
+

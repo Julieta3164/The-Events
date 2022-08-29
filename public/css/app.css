@@ -1,7 +1,7 @@
 header {
   border: solid 1px black;
   border-radius: 10px;
-  background: rgb(53, 162, 73);
+  /*     background: rgb(53, 162, 73); */
   width: 100vw;
 }
 
@@ -25,4 +25,8 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+#constructionImg {
+  width: 100vh;
 }
