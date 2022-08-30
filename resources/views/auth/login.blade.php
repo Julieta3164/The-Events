@@ -47,10 +47,14 @@
                     </a>
                 @endif
 
-                <x-button class="ml-3 btn-init">
-                    {{ __('Iniciar sesión') }}
-                </x-button>
+                
             </div>
         </form>
     </x-auth-card>
 </x-guest-layout>
+<div class="conten-init">
+
+<x-button class="ml-3 btn-init">
+    {{ __('Iniciar sesión') }}
+</x-button>
+</div>

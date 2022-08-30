@@ -1747,26 +1747,38 @@ body {
   margin: 1%;
 }
 
-.btn-registrar {
-  background: #EB4603;
+.conten-resgistrate {
+  display: flex;
+  justify-content: center;
 }
-
-.btn-registrar:hover {
+.conten-resgistrate .btn-registrar {
+  background: #EB4603;
+  width: 15%;
+  text-align: center;
+}
+.conten-resgistrate .btn-registrar:hover {
   background: #db2929;
 }
 
-.btn-init {
-  background: #EB4603;
+.conten-init {
+  display: flex;
+  justify-content: center;
 }
-
-.btn-init:hover {
+.conten-init .btn-init {
+  background: #EB4603;
+  width: 15%;
+}
+.conten-init .btn-init:hover {
   background: #db2929;
 }
 
-.btn-olvido {
+.conten-olvido {
+  display: flex;
+  justify-content: center;
+}
+.conten-olvido .btn-olvido {
   background: #EB4603;
 }
-
-.btn-olvido:hover {
+.conten-olvido .btn-olvido:hover {
   background: #db2929;
 }

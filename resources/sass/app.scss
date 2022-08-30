@@ -8,30 +8,49 @@ body{
     margin: 1%;
 }
 
-
+.conten-resgistrate{
+    display:flex;
+justify-content: center;
 .btn-registrar{
     background:#EB4603;
+    width: 15%;
+    text-align: center;
 }
-
 .btn-registrar:hover{
     background:#db2929;
 }
-
-.btn-init{
-    background:#EB4603;
 }
 
+
+
+.conten-init{
+    display:flex;
+justify-content: center;
+.btn-init{
+    background:#EB4603;
+    width: 15%;
+}
 .btn-init:hover{
     background:#db2929;
 }
-
-.btn-olvido{
-    background:#EB4603;
 }
 
-.btn-olvido:hover{
-    background:#db2929;
+
+
+
+.conten-olvido{
+    display:flex;
+    justify-content: center;
+    .btn-olvido{
+        background:#EB4603;
+    }
+    
+    .btn-olvido:hover{
+        background:#db2929;
+    }
 }
+
+
 
 
 
