@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class button-header extends Component
+class buttonheader extends Component
 {
     /**
      * Create a new component instance.
