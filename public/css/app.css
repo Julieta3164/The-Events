@@ -70,13 +70,44 @@
     text-decoration: none;
   }
 }
-.card-home .card-title2 {
-  margin: 1%;
-  text-align: center;
+.img-card {
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}
+.img-card img {
+  width: 80%;
 }
 
-a {
-  margin: 1%;
+.card-title2 {
+  background: #F2D303;
+  padding: 2%;
+}
+
+.button-cards {
+  justify-content: center;
+}
+.button-cards .btn-primary {
+  width: 100%;
+  margin: 2%;
+}
+
+.btn-primary1 {
+  background: #EB4603;
+  border: #EB4603;
+}
+
+.btn-primary1:hover {
+  background-color: #d47752;
+}
+
+.btn-primary2 {
+  background: #E88919;
+  border: #E88919;
+}
+
+.btn-primary2:hover {
+  background: #daa05e;
 }
 
 .footer {

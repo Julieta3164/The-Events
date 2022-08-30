@@ -1,8 +1,12 @@
 <div>
     <div class="card card-home" style="width: 18rem;">
+        <div class="img-card">
         <img src="{{ asset('./img/cons.jpg') }}" class="card-img-top" alt="...">
+        </div>
+
         <div class="card-body">
-        <h5 class="card-title card-title2">Titulo
+            <div class="card-title2">
+        <h5 class="card-title ">Titulo
 {{--             @foreach ($events as $event)
                 {{ $event->title}}
             @endforeach --}}
@@ -19,8 +23,11 @@
                 {{ $event->Hora}}
             @endforeach --}}
         </p>
-        <a href="#" class="btn btn-primary">Mas Información</a>
-        <a href="#" class="btn btn-primary">Solicitar Plaza</a>
+    </div>
+        <div class="button-cards">
+        <a href="#" class="btn btn-primary btn-primary1">Mas Información</a>
+        <a href="#" class="btn btn-primary btn-primary2">Solicitar Plaza</a>
+    </div>
         </div>
     </div>
 </div>
