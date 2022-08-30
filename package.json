@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "private": true,
   "scripts": {
     "dev": "npm run development",
@@ -513,4 +514,33 @@
     "url": "https://github.com/Julieta3164/The-Events/issues"
   },
   "homepage": "https://github.com/Julieta3164/The-Events#readme"
+=======
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.4.0",
+        "alpinejs": "^3.4.2",
+        "autoprefixer": "^10.4.2",
+        "axios": "^0.21",
+        "laravel-mix": "^6.0.6",
+        "lodash": "^4.17.19",
+        "postcss": "^8.4.6",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.54.5",
+        "sass-loader": "^12.1.0",
+        "tailwindcss": "^3.0.18"
+    },
+    "dependencies": {
+        "blade": "^3.3.1",
+        "bootstrap": "^5.2.0"
+    }
+>>>>>>> marta3
 }

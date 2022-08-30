@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\add;
+use App\Http\Controllers\create;
+use App\Http\Controllers\description;
+use App\Http\Controllers\home;
+use App\Models\Role;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,11 +20,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+
+    return view('home');
 });
+
+Route::get('/testing', function () {
+
+    $role = Role::find(1);
+    return view('testing', compact('role'));
+});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+/* Route::get('/home', [home::class, 'index']); */
+Route::get('/add', [add::class, 'index']);
+Route::get('/description', [description::class, 'index']);
+Route::get('/create', [create::class, 'index']);
