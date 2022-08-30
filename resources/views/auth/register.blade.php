@@ -50,7 +50,7 @@
                     {{ __('¿Ya te has Registrado?') }}
                 </a>
 
-                <x-button class="ml-4">
+                <x-button class="ml-4 btn-registrar">
                     {{ __('Registrate') }}
                 </x-button>
             </div>
