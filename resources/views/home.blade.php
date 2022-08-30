@@ -7,6 +7,12 @@
 <br>
 <br>
 <br>
+<x-carousel/>
+<br>
+<br>
+<br>
+<br>
+<x-cards/>
 <br>
 <br>
 <br>

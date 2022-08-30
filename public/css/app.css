@@ -2,7 +2,6 @@
   position: absolute;
   width: 98%;
   height: 200px;
-  overflow: hidden;
   background-image: url("/img/header.png");
 }
 
@@ -71,11 +70,50 @@
     text-decoration: none;
   }
 }
+.img-card {
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}
+.img-card img {
+  width: 80%;
+}
+
+.card-title2 {
+  background: #F2D303;
+  padding: 2%;
+}
+
+.button-cards {
+  justify-content: center;
+}
+.button-cards .btn-primary {
+  width: 100%;
+  margin: 2%;
+}
+
+.btn-primary1 {
+  background: #EB4603;
+  border: #EB4603;
+}
+
+.btn-primary1:hover {
+  background-color: #d47752;
+}
+
+.btn-primary2 {
+  background: #E88919;
+  border: #E88919;
+}
+
+.btn-primary2:hover {
+  background: #daa05e;
+}
+
 .footer {
   position: absolute;
   width: 98%;
   height: 200px;
-  overflow: hidden;
   background-image: url("/img/header.png");
 }
 
@@ -101,8 +139,9 @@
 }
 .copy p {
   color: white;
-  font-size: 25px;
+  font-size: 15px;
   padding: 3%;
+  padding-bottom: 9%;
 }
 
 .text {
@@ -114,7 +153,7 @@
 }
 .text h3 {
   color: white;
-  font-size: 40px;
+  font-size: 25px;
 }
 
 .icons {
@@ -177,7 +216,7 @@
   }
   .icons i {
     color: white;
-    font-size: 10px;
+    font-size: 6px;
   }
 }
 /*

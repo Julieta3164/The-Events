@@ -1,5 +1,7 @@
 @import 'header';
 @import 'button';
+@import 'carousel';
+@import 'cards';
 @import 'footer';
 @import 'styletailwind';
 body{
@@ -30,4 +32,6 @@ body{
 .btn-olvido:hover{
     background:#db2929;
 }
+
+
 

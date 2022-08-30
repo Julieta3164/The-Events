@@ -1,0 +1,45 @@
+.img-card{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+    
+    img{
+        width: 80%;
+        
+    }
+}
+
+.card-title2{
+    padding: 1%;
+    background: #F2D303;
+    padding: 2%;
+    
+}
+
+
+.button-cards{
+    justify-content: center;
+    .btn-primary{
+        width: 100%;
+        margin: 2%;
+
+    }
+}
+
+
+
+.btn-primary1{
+    background: #EB4603;
+    border: #EB4603;
+}
+.btn-primary1:hover{
+    background-color: #d47752;
+}
+
+.btn-primary2{
+    background: #E88919;
+    border: #E88919;
+}
+.btn-primary2:hover{
+    background: #daa05e;
+}
