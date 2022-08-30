@@ -101,8 +101,9 @@
 }
 .copy p {
   color: white;
-  font-size: 25px;
+  font-size: 15px;
   padding: 3%;
+  padding-bottom: 9%;
 }
 
 .text {
@@ -114,7 +115,7 @@
 }
 .text h3 {
   color: white;
-  font-size: 40px;
+  font-size: 25px;
 }
 
 .icons {
@@ -177,7 +178,7 @@
   }
   .icons i {
     color: white;
-    font-size: 10px;
+    font-size: 6px;
   }
 }
 /*
