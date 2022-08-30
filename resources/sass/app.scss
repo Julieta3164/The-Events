@@ -1,6 +1,33 @@
 @import 'header';
 @import 'button';
 @import 'footer';
+@import 'styletailwind';
 body{
     margin: 1%;
 }
+
+
+.btn-registrar{
+    background:#EB4603;
+}
+
+.btn-registrar:hover{
+    background:#db2929;
+}
+
+.btn-init{
+    background:#EB4603;
+}
+
+.btn-init:hover{
+    background:#db2929;
+}
+
+.btn-olvido{
+    background:#EB4603;
+}
+
+.btn-olvido:hover{
+    background:#db2929;
+}
+
