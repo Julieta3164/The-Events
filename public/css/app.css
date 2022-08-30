@@ -2,7 +2,6 @@
   position: absolute;
   width: 98%;
   height: 200px;
-  overflow: hidden;
   background-image: url("/img/header.png");
 }
 
@@ -71,11 +70,15 @@
     text-decoration: none;
   }
 }
+.card-home .card-title2 {
+  margin: 1%;
+  text-align: center;
+}
+
 .footer {
   position: absolute;
   width: 98%;
   height: 200px;
-  overflow: hidden;
   background-image: url("/img/header.png");
 }
 
