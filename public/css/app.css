@@ -952,7 +952,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .min-h-screen {
-  min-height: 100vh;
+  min-height: 80vh;
 }
 
 .w-5 {
