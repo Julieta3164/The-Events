@@ -88,8 +88,8 @@
   justify-content: center;
 }
 .button-cards .btn-primary {
+  margin-top: 3%;
   width: 100%;
-  margin: 2%;
 }
 
 .btn-primary1 {
