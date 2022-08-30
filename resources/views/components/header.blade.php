@@ -17,7 +17,7 @@
 <body>
   <header>
   <div class="cabecera">
-    <img id="img-header" src="{{ asset('./img/header.png') }}"/>
+{{--     <img id="img-header" src="{{ asset('./img/header.png') }}"/> --}}
   </div>
       <div class="logo">
         <img src="{{ asset('./img/logo.png') }}" />

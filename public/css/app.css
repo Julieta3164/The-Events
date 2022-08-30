@@ -3,6 +3,7 @@
   width: 98%;
   height: 200px;
   overflow: hidden;
+  background-image: url("/img/header.png");
 }
 
 .logo {
