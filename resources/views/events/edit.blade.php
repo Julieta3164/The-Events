@@ -5,8 +5,6 @@
         </h2>
     </x-slot>
 
-
-
     <div class="py-12">
         <div class="max-w-5xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -22,45 +20,45 @@
                     </div>
                     @endif
 
-                    <form method="POST" action="{{route('events.update', $product)}}">
+                    <form method="POST" action="{{route('events.update', $event)}}">
                         @csrf
                         @method('PUT')
                         <div>
                             <x-label for="title" :value="__('Title')" />
 
-                            <x-input id="title" class="block mt-1 w-full" type="text" name="name" :value="old('title') ?? $product->title" required autofocus />
+                                <span>$ </span><x-input id="title" class="block mt-1 w-full" type="text" name="title" :value="old('title') ?? $event->title" required />
                         </div>
 
                         <div class="mt-4 grid grid-flow-col grid-rows-1 grid-cols-2">
-                            <div>
+                            {{-- <div>
                                 <x-label for="price" :value="__('Image')" />
 
                                 <span>$ </span><x-input id="image" class="mt-1 w-24" type="text" name="image" :value="old('image') ?? $product->image" required />
-                            </div>
-                            div>
+                            </div> --}}
+                            <div>
                                 <x-label for="price" :value="__('Description')" />
 
-                                <span>$ </span><x-input id="description" class="mt-1 w-24" type="text" name="description" :value="old('description') ?? $product->description" required />
+                                <span>$ </span><x-input id="description" class="mt-1 w-24" type="text" name="description" :value="old('description') ?? $event->description" required />
                             </div>
-                            div>
+                            <div>
                                 <x-label for="price" :value="__('Date')" />
 
-                                <span>$ </span><x-input id="date" class="mt-1 w-24" type="text" name="date" :value="old('date') ?? $product->date" required />
+                                <span>$ </span><x-input id="date" class="mt-1 w-24" type="text" name="date" :value="old('date') ?? $event->date" required />
                             </div>
-                            div>
+                           <div>
                                 <x-label for="price" :value="__('Time')" />
 
-                                <span>$ </span><x-input id="time" class="mt-1 w-24" type="text" name="time" :value="old('time') ?? $product->time" required />
+                                <span>$ </span><x-input id="time" class="mt-1 w-24" type="text" name="time" :value="old('time') ?? $event->time" required />
                             </div>
-                            div>
+                            <div>
                                 <x-label for="price" :value="__('People')" />
 
-                                <span>$ </span><x-input id="people" class="mt-1 w-24" type="text" name="people" :value="old('people') ?? $product->people" required />
+                                <span>$ </span><x-input id="people" class="mt-1 w-24" type="text" name="people" :value="old('people') ?? $event->people" required />
                             </div>
                             <div class="my-auto">
-                                <x-button class="ml-3 float-right">
+                                <button class="ml-3 float-right">
                                     {{ __('Actualizar') }}
-                                </x-button>
+                                </button>
                             </div>
                         </div>
                     </form>

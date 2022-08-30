@@ -1,11 +1,10 @@
+{{-- <x-header/> --}}
 <x-app-layout>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Eventos') }}
         </h2>
     </x-slot>
-
   
 
     <div class="py-12">
@@ -62,9 +61,9 @@
                                                 <span>$ </span><x-input id="people" class="mt-1 w-20" type="text" name="people" :value="old('people')" required />
                                             </div>
                             <div class="my-auto">
-                                <x-button class="ml-3 float-right">
+                                <button class="ml-3 float-right">
                                     {{ __('Guardar') }}
-                                </x-button>
+                                </button>
                             </div>
                         </div>
                     </form>

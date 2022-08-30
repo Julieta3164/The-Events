@@ -34,10 +34,19 @@ require __DIR__.'/auth.php';
 
 Route::get('/events/create', function () {
     return view('events.create');
-})->middleware('auth')->name('events.create');
+})
+// ->middleware('auth')
+->name('events.create');
+
+Route::get('/events/edit', function () {
+    return view('events.edit');
+})
+// ->middleware('auth')
+->name('events.edit');
 
 Route::get('/events', function () {
-    return view('events.events')->name('events');
+    return view('events.events')
+    ->name('events');
 });
 
 Route::resource('/events', EventController::class);

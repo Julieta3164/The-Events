@@ -11,7 +11,7 @@ class EventController extends Controller
     {
         $events = Event::all();
 
-        return view('events.events', compact('events'));
+        return view('events.events')->with('event',$events);
     }
 
     public function create()
@@ -41,16 +41,9 @@ class EventController extends Controller
     public function edit($id)
     {
          $event = Event::find($id);
-         return view('event.edit')->with('event',$event);
+         return view('events.edit')->with('event',$event);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $event = Event::find($id);
@@ -61,6 +54,14 @@ class EventController extends Controller
         $event->date = $request->get('date');
         $event->people = $request->get('people');
         $event->save();
+
+        return redirect('/events');
+    }
+
+    public function destroy($id)
+    {
+        $event = Event::find($id);        
+        $event->delete();
 
         return redirect('/events');
     }

@@ -1,5 +1,6 @@
-<x-app-layout>
-    @extends('layouts.baseevents')
+{{-- <x-app-layout>
+    <x-header/>
+    @extends('layouts.baseevents') --}}
 
 <a href="events/create" class="btn btn-primary">CREAR</a>
 
@@ -13,24 +14,22 @@
         <th scope="col">Personas</th>
       </tr>
     </thead>
-    <tbody>    
-      @foreach ($events as $event)
-      @continue
-      <tr>
+    <tbody>
+      @foreach ($event as $event)
           <td>{{$event->title}}</td>
           <td>{{$event->description}}</td>
           <td>{{$event->date}}</td>
           <td>{{$event->time}}</td>
           <td>{{$event->people}}</td>
           <td>
-           <form action="" method="POST">
-            <a href="/events/{{$event->id}}/edit" class="btn btn-info">Editar</a>         
-                @csrf
-                @method('DELETE')
-            <button type="submit" class="btn btn-danger">Delete</button>
-           </form>          
-          </td>        
-      </tr>
-      @endforeach
+            <form action="{{ route('events.destroy',$event->id) }}" method="POST">
+             <a href="/events/{{$event->id}}/edit" class="btn btn-info">Editar</a>         
+                 @csrf
+                 @method('DELETE')
+             <button type="submit" class="btn btn-danger">Delete</button>
+            </form>          
+           </td>        
+       </tr>
+      @endforeach    
     </tbody>
   </table>
