@@ -30,13 +30,20 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/create', function () {
+    return view('create');
+})->middleware(['auth'])->name('create');
+
+Route::get('/create', function () {
+    return view('create');
+})->middleware(['admin'])->name('create');
+
 require __DIR__.'/auth.php';
 
-Route::get('/events/create', function () {
+/* Route::get('/events/create', function () {
     return view('events.create');
-})
-// ->middleware('auth')
-->name('events.create');
+}) */
+Route::get('/events/create', 'CreateController@index');
 
 Route::get('/events/edit', function () {
     return view('events.edit');
