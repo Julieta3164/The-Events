@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class description extends Controller
+class Description extends Controller
 {
     public function index(){
         return \view ('description');
