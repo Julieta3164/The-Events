@@ -40,5 +40,5 @@ require __DIR__.'/auth.php';
 
 /* Route::get('/home', [home::class, 'index']); */
 Route::get('/add', [add::class, 'index']);
-Route::get('/description', [description::class, 'index']);
+Route::get('/description', [Description::class, 'index']);
 Route::get('/create', [create::class, 'index']);
