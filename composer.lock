@@ -459,10 +459,6 @@
             "time": "2022-08-29T19:51:08+00:00"
         },
         {
-<<<<<<< HEAD
-            "name": "illuminate/container",
-            "version": "v9.27.0",
-=======
             "name": "league/flysystem-cached-adapter",
             "version": "1.0.2",
             "source": {
@@ -577,7 +573,6 @@
         {
             "name": "league/mime-type-detection",
             "version": "1.11.0",
->>>>>>> marta3
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -1367,9 +1362,6 @@
                     "type": "github"
                 }
             ],
-<<<<<<< HEAD
-            "time": "2022-08-01T11:03:24+00:00"
-=======
             "time": "2022-07-30T15:51:26+00:00"
         },
         {
@@ -1529,7 +1521,6 @@
                 "source": "https://github.com/php-fig/cache/tree/3.0.0"
             },
             "time": "2021-02-03T23:26:27+00:00"
->>>>>>> marta3
         },
         {
             "name": "psr/container",
