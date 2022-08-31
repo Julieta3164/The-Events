@@ -7,6 +7,17 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function adminHome()
+    {
+        return view('/events');
+    }
+
     public function index()
     {
         $events = Event::all();
