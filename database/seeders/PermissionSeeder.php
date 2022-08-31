@@ -20,46 +20,6 @@ class PermissionSeeder extends Seeder
     public function run()
     {
         //truncate tables
-        DB::statement("SET foreign_key_checks=0");
-            DB::table('role_user')->truncate();
-            DB::table('permission_role')->truncate();
-            ModelsPermission::truncate();
-            ModelsRole::truncate();
-        DB::statement("SET foreign_key_checks=1");
-
-
-
-        //user admin
-        $useradmin= ModelsUser::where('email','admin@admin.com')->first();
-        if ($useradmin) {
-            $useradmin->delete();
-        }
-        $useradmin= ModelsUser::create([
-            'name'      => 'admin',
-            'email'     => 'admin@admin.com',
-            'password'  => Hash::make('admin')    
-        ]);
-
-        //rol admin
-        $roladmin=ModelsRole::create([
-            'name' => 'Admin',
-            'slug' => 'admin',
-            'description' => 'Administrator',
-            'full-access' => 'yes'
-    
-        ]);
-
-         //rol Registered User
-         $roluser=ModelsRole::create([
-            'name' => 'Registered User',
-            'slug' => 'registereduser',
-            'description' => 'Registered User',
-            'full-access' => 'no'
-    
-        ]);
-        
-        //table role_user
-        $useradmin->roles()->sync([ $roladmin->id ]);
       
         
         //permission

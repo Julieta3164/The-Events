@@ -37,8 +37,7 @@ require __DIR__.'/auth.php';
 
 Route::get('/events/create', function () {
     return view('events.create');
-})
-// ->middleware('auth')
+})->middleware('auth')
 ->name('events.create');
 
 Route::get('/events/edit', function () {
@@ -58,10 +57,11 @@ Route::get('/test', function () {
     
     $user =User::find(2);
 
-    //$user->roles()->sync([2]);
-    Gate::authorize('haveaccess','role.show');
-    return $user;
-    //return $user->havePermission('role.create'); 
+    $user->roles()->sync([2]);
+    
+    // Gate::authorize('haveaccess','home');
+    // return $user;
+    return $user->havePermission('events.create'); 
 });
 
 Route::resource('/role', 'RoleController')->names('role');

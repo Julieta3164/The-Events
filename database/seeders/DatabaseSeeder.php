@@ -2,11 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\Event;
-use App\Models\Role;
-use App\Models\User;
-use Database\Seeders\PermissionSeeder as SeedersPermissionSeeder;
 use Illuminate\Database\Seeder;
+use App\Models\Permission as ModelsPermission;
+use App\Models\Role as ModelsRole;
+use App\Models\User as ModelsUser;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,7 +18,46 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(SeedersPermissionSeeder::class);
+        DB::statement("SET foreign_key_checks=0");
+            DB::table('role_user')->truncate();
+            DB::table('permission_role')->truncate();
+            ModelsPermission::truncate();
+            ModelsRole::truncate();
+        DB::statement("SET foreign_key_checks=1");
+
+
+
+        //user admin
+        $useradmin= ModelsUser::where('email','admin@admin.com')->first();
+        if ($useradmin) {
+            $useradmin->delete();
+        }
+        $useradmin= ModelsUser::create([
+            'name'      => 'admin',
+            'email'     => 'admin@admin.com',
+            'password'  => Hash::make('admin')    
+        ]);
+
+        //rol admin
+        $roladmin=ModelsRole::create([
+            'name' => 'Admin',
+            'slug' => 'admin',
+            'description' => 'Administrator',
+            'full-access' => 'yes'
+    
+        ]);
+
+         //rol Registered User
+         $roluser=ModelsRole::create([
+            'name' => 'Registered User',
+            'slug' => 'registereduser',
+            'description' => 'Registered User',
+            'full-access' => 'no'
+    
+        ]);
+        
+        //table role_user
+        $useradmin->roles()->sync([ $roladmin->id ]);
         /* Role::create([
             'name' => 'Admin',
             'slug' => 'admin',
