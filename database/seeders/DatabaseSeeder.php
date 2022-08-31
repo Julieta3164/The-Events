@@ -31,5 +31,9 @@ class DatabaseSeeder extends Seeder
         foreach ($events as $event){
             Event::create(['event' => $event]);
         }
+
+            \App\Models\Event::factory(100)->create();
+
+     $this->call([EventSeeder::class,]);
     }
 }
