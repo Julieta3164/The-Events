@@ -1,26 +1,56 @@
-header{
-    border: solid 1px black;
-    border-radius: 10px;
-    background: rgb(53, 162, 73);
-    width: 100vw;
-    
-}
-.header{
-    display: flex;
-    width: 100vw;
-    justify-content: space-between;
-}
-.logo{
-    display: flex;
-    justify-content: left;
-}
-.logo img{
-    width: 10vh;
+@import 'header';
+@import 'button';
+@import 'carousel';
+@import 'cards';
+@import 'footer';
+@import 'styletailwind';
+body{
     margin: 1%;
 }
-.btn{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    
+
+.conten-resgistrate{
+    display:flex;
+justify-content: center;
+.btn-registrar{
+    background:#EB4603;
+    width: 15%;
+    text-align: center;
 }
+.btn-registrar:hover{
+    background:#db2929;
+}
+}
+
+
+
+.conten-init{
+    display:flex;
+justify-content: center;
+.btn-init{
+    background:#EB4603;
+    width: 15%;
+}
+.btn-init:hover{
+    background:#db2929;
+}
+}
+
+
+
+
+.conten-olvido{
+    display:flex;
+    justify-content: center;
+    .btn-olvido{
+        background:#EB4603;
+    }
+    
+    .btn-olvido:hover{
+        background:#db2929;
+    }
+}
+
+
+
+
+
