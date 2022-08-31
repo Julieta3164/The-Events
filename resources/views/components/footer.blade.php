@@ -1,6 +1,5 @@
 <footer>
     <div class="footer">
-    <img id="img-header" src="{{ asset('./img/header.png') }}" />
   </div>
 
 
