@@ -8,38 +8,36 @@ body{
     margin: 1%;
 }
 
-.conten-resgistrate{
-    display:flex;
-justify-content: center;
+.menu-D{
+    position: relative;
+}
+
+
+
 .btn-registrar{
     background:#EB4603;
-    width: 15%;
-    text-align: center;
+
 }
 .btn-registrar:hover{
     background:#db2929;
 }
-}
 
 
 
-.conten-init{
+
+
 
 .btn-init{
     background:#EB4603;
-    width: 15%;
 }
 .btn-init:hover{
     background:#db2929;
 }
-}
 
 
 
 
-.conten-olvido{
-    display:flex;
-    justify-content: center;
+
     .btn-olvido{
         background:#EB4603;
     }
@@ -47,7 +45,6 @@ justify-content: center;
     .btn-olvido:hover{
         background:#db2929;
     }
-}
 
 
 

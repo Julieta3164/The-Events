@@ -1,4 +1,17 @@
-<x-constructionpage/>
-<footer>
-    <h5>Esta es la description page</h5>
-</footer>
+<x-header/>
+<x-buttonheader/>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<x-footer/>

@@ -952,7 +952,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .min-h-screen {
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 .w-5 {
@@ -1747,38 +1747,30 @@ body {
   margin: 1%;
 }
 
-.conten-resgistrate {
-  display: flex;
-  justify-content: center;
+.menu-D {
+  position: relative;
 }
-.conten-resgistrate .btn-registrar {
+
+.btn-registrar {
   background: #EB4603;
-  width: 15%;
-  text-align: center;
 }
-.conten-resgistrate .btn-registrar:hover {
+
+.btn-registrar:hover {
   background: #db2929;
 }
 
-.conten-init {
-  display: flex;
-  justify-content: center;
-}
-.conten-init .btn-init {
+.btn-init {
   background: #EB4603;
-  width: 15%;
 }
-.conten-init .btn-init:hover {
+
+.btn-init:hover {
   background: #db2929;
 }
 
-.conten-olvido {
-  display: flex;
-  justify-content: center;
-}
-.conten-olvido .btn-olvido {
+.btn-olvido {
   background: #EB4603;
 }
-.conten-olvido .btn-olvido:hover {
+
+.btn-olvido:hover {
   background: #db2929;
 }
