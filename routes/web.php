@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\EventController;
 use App\Models\Role;
+use App\Models\User;
+use App\Models\Permission;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -57,3 +60,59 @@ Route::get('/events', function () {
 });
 
 Route::resource('/events', EventController::class);
+
+Route::get('/test', function () {
+    
+    $user =User::find(2);
+
+    $user->roles()->sync([2]);
+    
+    // Gate::authorize('haveaccess','home');
+    // return $user;
+    return $user->havePermission('events.create'); 
+});
+
+Route::resource('/role', 'RoleController')->names('role');
+
+Route::resource('/user', 'UserController', ['except'=>[
+    'create','store']])->names('user');
+
+
+/* Route::get('/test', function () {
+    Permission::create([
+        'name' => 'Create Event',
+        'slug' => 'event.create',
+        'description' => 'Admin can create Event',
+        ]);
+    $role = Role::find(1);
+    $role->permissions()->sync([1]);
+
+    return $role->permissions;
+}); */
+// /* Route::get('/test', function () {
+
+//   /*   return Role::create([
+//         'name' => 'Admin',
+//         'slug' => 'admin',
+//         'description' => 'Administrador',
+//         'full-access' => 'yes',
+
+//     ]); */
+
+// /*     return Role::create([
+//         'name' => 'User',
+//         'slug' => 'user',
+//         'description' => 'Usuario',
+//         'full-access' => 'no',
+
+//     ]); */
+
+//     $user = User::find(1);
+//     $user->roles()->attach([1,2]);
+
+//     return $user->roles;
+// }); */
+/* Route::get('/home', [home::class, 'index']); */
+/* Route::get('/add', [add::class, 'index']);
+Route::get('/description', [Description::class, 'index']); */
+/* Route::get('/create', [create::class, 'index']); */
