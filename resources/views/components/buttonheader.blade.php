@@ -2,7 +2,7 @@
         
         @if (Route::has('login'))
         @auth
-            <a href="{{ url('/dashboard') }}" class="">Panel Personal</a>
+            <a href="{{ url('/dashboard') }}" class="">Bienvenido</a>
         @else
 
 

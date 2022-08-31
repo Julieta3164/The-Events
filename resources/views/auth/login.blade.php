@@ -45,16 +45,11 @@
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
                         {{ __('¿Olvidaste tu contraseña?') }}
                     </a>
-                @endif
+                    @endif
 
-                
-            </div>
-        </form>
+                    <x-button class="ml-3 btn-init">
+                        {{ __('Iniciar Sección') }}
+                    </x-button>
+                </div>
     </x-auth-card>
 </x-guest-layout>
-<div class="conten-init">
-
-<x-button class="ml-3 btn-init">
-    {{ __('Iniciar sesión') }}
-</x-button>
-</div>
