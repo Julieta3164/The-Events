@@ -952,7 +952,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .min-h-screen {
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 .w-5 {
@@ -1760,10 +1760,6 @@ body {
   background: #db2929;
 }
 
-.conten-init {
-  display: flex;
-  justify-content: center;
-}
 .conten-init .btn-init {
   background: #EB4603;
   width: 15%;
