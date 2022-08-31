@@ -50,13 +50,14 @@
                     {{ __('¿Ya te has Registrado?') }}
                 </a>
             </div>
+
+                <x-button class="ml-4 btn-registrar">
+                    {{ __('Registrate') }}
+                </x-button>
+
         </form>
     </x-auth-card>
 </x-guest-layout>
 
 
-<div class="conten-resgistrate">
-<x-button class="ml-4 btn-registrar">
-    {{ __('Registrate') }}
-</x-button>
-</div>
+

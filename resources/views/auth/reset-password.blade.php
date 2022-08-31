@@ -37,12 +37,14 @@
                                     type="password"
                                     name="password_confirmation" required />
             </div>
+            <div class="flex items-center justify-end mt-4">
+                <x-button>
+                    {{ __('Reset Password') }}
+                </x-button>
+            </div>
+
         </form>
 
-        <div class="flex items-center justify-end mt-4">
-            <x-button>
-                {{ __('Reset Password') }}
-            </x-button>
-        </div>
+
     </x-auth-card>
 </x-guest-layout>

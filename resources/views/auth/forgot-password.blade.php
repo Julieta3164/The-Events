@@ -25,15 +25,14 @@
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
             </div>
-
+      
+                <x-button>
+                    {{ __('Enlace de restablecimiento de contraseña de correo electrónico') }}
+                </x-button>
+       
             
         </form>
     </x-auth-card>
 </x-guest-layout>
 
 
-<div class=" conten-olvido">
-    <x-button>
-        {{ __('Enlace de restablecimiento de contraseña de correo electrónico') }}
-    </x-button>
-</div>
