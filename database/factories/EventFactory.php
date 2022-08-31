@@ -14,12 +14,12 @@ class EventFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->name(),
-            'image' => $this->faker->name(),
-            'description' => $this->faker->name(),
-            'time' => $this->faker->name(),
-            'date' => $this->faker->name(),
-            'people' => $this->faker->name(),
+            'title',
+            'image',
+            'description',
+            'time',
+            'date',
+            'people',
         ];
     }
 }
