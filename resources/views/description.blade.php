@@ -1,5 +1,4 @@
 <x-header/>
-<x-buttonheader/>
 <br>
 <br>
 <br>
