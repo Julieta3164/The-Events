@@ -28,6 +28,8 @@ Route::get('/testing', function () {
     return view('testing', compact('role'));
 });
 
+Route::get('/adminview', function() { return view('adminview');})->middleware(['auth','admin']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -39,7 +41,7 @@ Route::get('/dashboard', function () {
 
 Route::get('/events/create', function () {
     return view('create');
-})->middleware(['admin'])->name('create');
+})->middleware(['auth','admin'])->name('create');
 
 require __DIR__.'/auth.php';
 

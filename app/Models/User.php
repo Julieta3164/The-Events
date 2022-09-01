@@ -45,9 +45,11 @@ class User extends Authenticatable
         return $this->belongsToMany(Role::class);
     }
 
-    public function havePermission($permission){
-        return view ('events.create');
+
+    public function hasAnyRole (string $role) {
+        $this-> roles()->where('name', $role)->first();
     }
+    
 
     public function events(){
         return $this->belongsToMany(Event::class);
