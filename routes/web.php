@@ -29,17 +29,27 @@ Route::get('/testing', function () {
     return view('testing', compact('role'));
 });
 
+Route::get('/adminview', function() { return view('adminview');})->middleware(['auth','admin']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+/* Route::get('/events/create', function () {
+    return view('create');
+})->middleware(['auth'])->name('create'); */
 
 Route::get('/events/create', function () {
+    return view('create');
+})->middleware(['auth','admin'])->name('create');
+
+require __DIR__.'/auth.php';
+
+/* Route::get('/events/create', function () {
     return view('events.create');
-})->middleware('admin')
-->name('events.create');
+}) */
+/* Route::get('/events/create', 'CreateController@index'); */
 
 Route::get('/events/edit', function () {
     return view('events.edit');
@@ -57,13 +67,16 @@ Route::get('/events', function () {
 Route::resource('/events', EventController::class);
 
 Route::get('/test', function () {
+    return view('events.create');
     
-    $user =User::find(2);
-
+/*  $user =User::find(2); */
+/* 
     $user->roles()->sync([2]);
-
-    return $user; 
-});
+    
+     Gate::authorize('haveaccess','home');
+   return $user;
+    return $user->havePermission('events.create');   */ 
+})->middleware(['admin'])->name('events.create');
 
 Route::resource('/role', 'RoleController')->names('role');
 
@@ -106,6 +119,6 @@ Route::resource('/user', 'UserController', ['except'=>[
 //     return $user->roles;
 // }); */
 /* Route::get('/home', [home::class, 'index']); */
-Route::get('/add', [add::class, 'index']);
-Route::get('/description', [description::class, 'index']);
-Route::get('/create', [create::class, 'index']);
+/* Route::get('/add', [add::class, 'index']);
+Route::get('/description', [Description::class, 'index']); */
+/* Route::get('/create', [create::class, 'index']); */

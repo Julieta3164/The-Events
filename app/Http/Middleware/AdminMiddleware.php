@@ -15,8 +15,15 @@ class AdminMiddleware
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
+
+
     public function handle(Request $request, Closure $next)
     {
-        
+        $role = $request->user()->roles[0]->name;
+        if ( $role ==='Admin') {
+            return $next($request);
+        }
+
+        return abort(403, sprintf('User does not have %s role', $role));
     }
 }
