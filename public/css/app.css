@@ -88,8 +88,8 @@
   justify-content: center;
 }
 .button-cards .btn-primary {
+  margin-top: 3%;
   width: 100%;
-  margin: 2%;
 }
 
 .btn-primary1 {
@@ -1149,9 +1149,13 @@ input::placeholder, textarea::placeholder {
   border-color: rgb(243 244 246/var(--tw-border-opacity));
 }
 
-.bg-white {
+/* .bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255/var(--tw-bg-opacity));
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+} */
+.bg-orange {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22/var(--tw-bg-opacity));
 }
 
 .bg-gray-100 {
@@ -1739,8 +1743,78 @@ input::placeholder, textarea::placeholder {
     padding-right: 2rem;
   }
 }
+.title-description {
+  margin: 2%;
+  width: 90%;
+  margin-top: 4%;
+}
+.title-description h2 {
+  font-size: 200%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.description-container2 {
+  width: 90%;
+  display: flex;
+  margin-top: 10%;
+  margin: 2%;
+  justify-content: space-around;
+  padding: 2%;
+}
+
+.image-description {
+  width: 50%;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+}
+.image-description img {
+  width: 40%;
+}
+
+.text-description {
+  border: solid 2px #E88919;
+  padding: 1%;
+  width: 50%;
+  background: #F8E358;
+}
+.text-description h2 {
+  font-weight: bold;
+  text-align: center;
+  margin: 1%;
+}
+.text-description p {
+  background: #F8E358;
+  margin: 1%;
+  font-size: 80%;
+}
+.text-description .datos {
+  font-weight: bold;
+}
+
+.btn-description {
+  display: flex;
+  justify-content: end;
+  width: 90%;
+  margin: 2%;
+}
+.btn-description .description-button {
+  border: solid 2px #E88919;
+  background: #E88919;
+  color: white;
+  text-align: center;
+  margin: 2%;
+  margin-right: 21%;
+  padding: 1%;
+}
+
 body {
   margin: 1%;
+}
+
+.menu-D {
+  position: relative;
 }
 
 .btn-registrar {
