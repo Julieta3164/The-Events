@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\description;
 use App\Models\Role;
 use App\Models\User;
 use App\Models\Permission;
@@ -106,5 +107,5 @@ Route::resource('/user', 'UserController', ['except'=>[
 // }); */
 /* Route::get('/home', [home::class, 'index']); */
 Route::get('/add', [add::class, 'index']);
-Route::get('/description', [Description::class, 'index']);
+Route::get('/description', [description::class, 'index']);
 Route::get('/create', [create::class, 'index']);
