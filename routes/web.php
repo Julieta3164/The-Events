@@ -4,7 +4,6 @@ use App\Http\Controllers\EventController;
 use App\Models\Role;
 use App\Models\User;
 use App\Models\Permission;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Route;
 
@@ -18,28 +17,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-Auth::routes();
-
-Route::prefix('events')->middleware('auth')->group(function() {
-    Route::get('/events/create', function () {
-        return view('events.create');
-    })
-    // ->middleware('admin')
-    ->name('events.create');
-    
-    Route::get('/events/edit', function () {
-        return view('events.edit');
-    })->middleware('admin')
-    // ->middleware('auth')
-    ->name('events.edit');
-    
-    Route::get('/events', function () {
-        return view('events.events')
-        ->name('events');
-    });
-});
 
 Route::get('/', function () {
     return view('home');
@@ -58,14 +35,34 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-// Route::get('/test', function () {
-    
-//     $user =User::find(2);
+Route::get('/events/create', function () {
+    return view('events.create');
+})->middleware('admin')
+->name('events.create');
 
-//     $user->roles()->sync([2]);
+Route::get('/events/edit', function () {
+    return view('events.edit');
+})->middleware('admin')
+// ->middleware('auth')
+->name('events.edit');
+
+Route::get('/events', [EventController::class, 'adminHome']);
+
+Route::get('/events', function () {
+    return view('events.events')
+    ->name('events');
+});
+
+Route::resource('/events', EventController::class);
+
+Route::get('/test', function () {
     
-//     return $user; 
-// });
+    $user =User::find(2);
+
+    $user->roles()->sync([2]);
+
+    return $user; 
+});
 
 Route::resource('/role', 'RoleController')->names('role');
 
