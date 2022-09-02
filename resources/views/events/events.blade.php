@@ -1,24 +1,33 @@
 <x-header/>
 <x-buttonevents/>
 
-  <table class="table  table-striped mt-8 table-event" >
+<div class="conten-events">
       @foreach ($event as $event)
-      <div class="img-card ">
-        <button type="submit" class="btn-delete"> borrar{{-- <i class="bi bi-trash"></i> --}}</button>
-    
-
-    
+  <div class="img-card ">
+        <div class="img-events">
         <img src="{{ asset('./img/cons.jpg') }}" class="card-img-top" alt="...">
+        </div>
+        <div class="btn-edit-event">
+          <a  href="/events/{{$event->id}}/edit"> <i class="bi bi-pencil"></i> Editar</a>
+        </div>
+  </div>
 
-        <form   action="{{ route('events.destroy',$event->id) }}" method="POST">
-          <a class="btn-edit" href="/events/{{$event->id}}/edit" >Editar</a>         
-            @csrf
-            @method('DELETE')
-        </form> 
-  
-      
+
+
+
+{{-- <form   action="{{ route('events.destroy',$event->id) }}" method="POST">
+        <button type="submit" class="btn-delete"><i class="bi bi-trash"></i></button>
+          @csrf
+          @method('DELETE')
+      </form>  --}}
+
+     
+
+
+
+       
                     
       @endforeach
-    </tbody>
-  </table>
+</div>
+
 

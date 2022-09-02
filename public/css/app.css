@@ -1810,32 +1810,43 @@ input::placeholder, textarea::placeholder {
   padding: 1%;
 }
 
-.table-event {
-  border: solid black 1px;
-  position: absolute;
-  margin: 2%;
-  width: 50%;
-  height: 50%;
-  margin-top: 30%;
+.conten-events {
+  margin-top: 10%;
   display: flex;
-  flex-direction: row-reverse;
-}
-.table-event img {
-  width: 50%;
-  margin: 1%;
+  flex-wrap: wrap;
 }
 
-.btn-delete {
+.img-card {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 200px;
+}
+.img-card .img-events img {
+  width: 20%;
+  height: 200px;
+}
+.img-card .btn-edit-event {
   position: relative;
-  width: 5%;
-  margin-bottom: 50%;
+  width: 100%;
+  display: flex;
+  margin: 1%;
+  padding: 1%;
+  background: #E88919;
+  justify-content: center;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+.img-card .btn-edit-event a {
+  width: 100%;
+  color: white;
+  text-decoration: none;
+}
+.img-card .btn-edit-event i {
+  margin-right: 5%;
 }
 
-.btn-edit {
-  display: flex;
-  width: 10%;
-  background: #EB4603;
-  border: #EB4603;
+form {
+  border: solid black 1px;
 }
 
 body {
