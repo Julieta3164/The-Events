@@ -19,19 +19,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::middleware(['admin'])->group(function () {
+
     Route::get('/adminview', function() {
         return view('adminview');})->middleware(['admin']);
     
-    Route::get('/events/create', function () {
+    /* Route::get('/events/create', function () {
         return view('create');
-    })->middleware(['auth'])->name('create');
+    })->middleware(['auth'])->name('create'); */
     
     Route::get('/events/create', function () {
         return view('create');
     })->middleware(['admin'])->name('create');
 
     Route::get('/events', function () {
-        return view('events.events');
+        return view('events');
     })->middleware(['admin'])
         ->name('events');
 
@@ -40,10 +41,9 @@ Route::middleware(['admin'])->group(function () {
     })->middleware(['admin'])
     ->name('events.edit');
     
-    Route::resource('/events', EventController::class);
+    Route::resource('/events', EventController::class);  
+    
 });
-    
-    
 
 Route::get('/description', [Description::class, 'index']);
     
