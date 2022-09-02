@@ -8,7 +8,7 @@
     
 
     
-        <img src="{{ asset('./img/cons.jpg') }}" class="card-img-top" alt="...">
+        <img src="/imagen/{{$event->image}}" class="card-img-top" alt="...">
 
         <form   action="{{ route('events.destroy',$event->id) }}" method="POST">
           <a class="btn-edit" href="/events/{{$event->id}}/edit" >Editar</a>         

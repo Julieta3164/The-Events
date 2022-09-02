@@ -23,10 +23,6 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/adminview', function() {
         return view('adminview');})->middleware(['admin']);
     
-    /* Route::get('/events/create', function () {
-        return view('create');
-    })->middleware(['auth'])->name('create'); */
-    
     Route::get('/events/create', function () {
         return view('create');
     })->middleware(['admin'])->name('create');
@@ -63,65 +59,7 @@ Route::get('/testing', function () {
 
 require __DIR__.'/auth.php';
 
-/* Route::get('/events/create', function () {
-    return view('events.create');
-}) */
-/* Route::get('/events/create', 'CreateController@index'); */
-
 
 Route::get('/test', function () {
     return view('events.create');
-    
-/*  $user =User::find(2); */
-/* 
-    $user->roles()->sync([2]);
-    
-     Gate::authorize('haveaccess','home');
-   return $user;
-    return $user->havePermission('events.create');   */ 
 })->middleware(['admin'])->name('events.create');
-
-Route::resource('/role', 'RoleController')->names('role');
-
-Route::resource('/user', 'UserController', ['except'=>[
-    'create','store']])->names('user');
-
-
-/* Route::get('/test', function () {
-    Permission::create([
-        'name' => 'Create Event',
-        'slug' => 'event.create',
-        'description' => 'Admin can create Event',
-        ]);
-    $role = Role::find(1);
-    $role->permissions()->sync([1]);
-
-    return $role->permissions;
-}); */
-// /* Route::get('/test', function () {
-
-//   /*   return Role::create([
-//         'name' => 'Admin',
-//         'slug' => 'admin',
-//         'description' => 'Administrador',
-//         'full-access' => 'yes',
-
-//     ]); */
-
-// /*     return Role::create([
-//         'name' => 'User',
-//         'slug' => 'user',
-//         'description' => 'Usuario',
-//         'full-access' => 'no',
-
-//     ]); */
-
-//     $user = User::find(1);
-//     $user->roles()->attach([1,2]);
-
-//     return $user->roles;
-// }); */
-/* Route::get('/home', [home::class, 'index']); */
-/* Route::get('/add', [add::class, 'index']);
- */
-/* Route::get('/create', [create::class, 'index']); */

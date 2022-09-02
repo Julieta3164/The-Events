@@ -30,10 +30,10 @@
                         </div>
 
                         <div class="mt-4 grid grid-flow-col grid-rows-1 grid-cols-2">
-                            {{-- <div>
+                            <div>
                                 <x-label for="price" :value="__('Image')" />
-                                <span>$ </span><x-input id="image" class="mt-1 w-24" type="text" name="image" :value="old('image') ?? $product->image" required />
-                            </div> --}}
+                                <span>$ </span><x-input id="image" class="mt-1 w-24" type="file" name="image" :value="old('image') ?? $product->image" required />
+                            </div>
                             <div>
                                 <x-label for="price" :value="__('Description')" />
 

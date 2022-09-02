@@ -25,7 +25,7 @@ class EventController extends Controller
         $events = new Event();
         $events->title = $request->get('title');
         $events->description = $request->get('description');
-        // $events->image = $request->get('image');
+        $events->image = $request->file('image');
         $events->time = $request->get('time');
         $events->date = $request->get('date');
         $events->people = $request->get('people');
@@ -50,7 +50,7 @@ class EventController extends Controller
         $event = Event::find($id);
         $event->title = $request->get('title');
         $event->description = $request->get('description');
-        // $events->image = $request->get('image');
+        $event->image = $request->get('image');
         $event->time = $request->get('time');
         $event->date = $request->get('date');
         $event->people = $request->get('people');
