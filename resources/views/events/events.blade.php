@@ -1,9 +1,5 @@
 <x-header/>
 
-
-
-
-
   <table class="table  table-striped mt-8 table-event">
       @foreach ($event as $event)   
       <div class="img-card table-event">
@@ -17,8 +13,8 @@
       <div>
         <form   action="{{ route('events.destroy',$event->id) }}" method="POST">
           <a class="btn-edit" href="/events/{{$event->id}}/edit" >Editar</a>         
-             @csrf
-             @method('DELETE')
+            @csrf
+            @method('DELETE')
         </form> 
       </div>
       
@@ -27,17 +23,3 @@
     </tbody>
   </table>
 
-
-
-
-
-
-
-
-
-
-  
-
-
-
- 
