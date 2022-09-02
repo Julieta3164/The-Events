@@ -31,7 +31,7 @@ class EventController extends Controller
         $events->people = $request->get('people');
         $events->save();
 
-        return redirect('/events');
+        return redirect('events.events');
     } 
 
         public function show($id)

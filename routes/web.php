@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\CreateController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\description;
+use App\Http\Controllers\EditController;
 use App\Models\Role;
 use App\Models\User;
 use App\Models\Permission;
@@ -20,8 +22,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::middleware(['admin'])->group(function () {
 
-    Route::get('/adminview', function() {
-        return view('adminview');})->middleware(['admin']);
+
     
     /* Route::get('/events/create', function () {
         return view('create');
@@ -30,18 +31,19 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/events/create', function () {
         return view('create');
     })->middleware(['admin'])->name('create');
-
-    Route::get('/events', function () {
-        return view('events.events');
+    
+    
+/*     Route::get('/events', function () {
+        return view('events');
     })->middleware(['admin'])
-        ->name('events');
+        ->name('events'); */
 
     Route::get('/events/edit', function () {
         return view('events.edit');
     })->middleware(['admin'])
     ->name('events.edit');
         
-    Route::resource('/events', EventController::class);
+  
     
 });
     
@@ -125,3 +127,13 @@ Route::resource('/user', 'UserController', ['except'=>[
 /* Route::get('/add', [add::class, 'index']);
 Route::get('/description', [Description::class, 'index']); */
 /* Route::get('/create', [create::class, 'index']); */
+
+/* Route::get('/events', [EventController::class, 'adminHome']);
+
+Route::get('/events', function () {
+    return view('events.events')
+    ->name('events');
+}); */
+Route::resource('/events', EventController::class)->middleware('admin');
+Route::resource('/events/create', CreateController::class)->middleware('admin');
+Route::resource('/events/edit', EditController::class)->middleware('admin');
