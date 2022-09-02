@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\EventController;
-use App\Http\Controllers\description;
+use App\Http\Controllers\Description;
 use App\Models\Role;
 use App\Models\User;
 use App\Models\Permission;
@@ -18,6 +18,38 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::middleware(['admin'])->group(function () {
+    Route::get('/adminview', function() {
+        return view('adminview');})->middleware(['admin']);
+    
+    Route::get('/events/create', function () {
+        return view('create');
+    })->middleware(['auth'])->name('create');
+    
+    Route::get('/events/create', function () {
+        return view('create');
+    })->middleware(['admin'])->name('create');
+
+    Route::get('/events', function () {
+        return view('events.events');
+    })->middleware(['admin'])
+        ->name('events');
+
+    Route::get('/events/edit', function () {
+        return view('events.edit');
+    })->middleware(['admin'])
+    ->name('events.edit');
+    
+    Route::resource('/events', EventController::class);
+});
+    
+    
+
+Route::get('/description', [Description::class, 'index']);
+    
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 Route::get('/', function () {
     return view('home');
@@ -29,20 +61,7 @@ Route::get('/testing', function () {
     return view('testing', compact('role'));
 });
 
-Route::get('/adminview', function() { return view('adminview');})->middleware(['auth','admin']);
 
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-/* Route::get('/events/create', function () {
-    return view('create');
-})->middleware(['auth'])->name('create'); */
-
-Route::get('/events/create', function () {
-    return view('create');
-})->middleware(['auth','admin'])->name('create');
 
 require __DIR__.'/auth.php';
 
@@ -51,20 +70,6 @@ require __DIR__.'/auth.php';
 }) */
 /* Route::get('/events/create', 'CreateController@index'); */
 
-Route::get('/events/edit', function () {
-    return view('events.edit');
-})->middleware('admin')
-// ->middleware('auth')
-->name('events.edit');
-
-Route::get('/events', [EventController::class, 'adminHome']);
-
-Route::get('/events', function () {
-    return view('events.events')
-    ->name('events');
-});
-
-Route::resource('/events', EventController::class);
 
 Route::get('/test', function () {
     return view('events.create');
@@ -120,5 +125,5 @@ Route::resource('/user', 'UserController', ['except'=>[
 // }); */
 /* Route::get('/home', [home::class, 'index']); */
 /* Route::get('/add', [add::class, 'index']);
-Route::get('/description', [Description::class, 'index']); */
+ */
 /* Route::get('/create', [create::class, 'index']); */

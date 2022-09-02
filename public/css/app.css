@@ -2,6 +2,7 @@
   position: absolute;
   width: 98%;
   height: 200px;
+  margin-bottom: 2%;
   background-image: url("/img/header.png");
 }
 
@@ -1807,6 +1808,34 @@ input::placeholder, textarea::placeholder {
   margin: 2%;
   margin-right: 21%;
   padding: 1%;
+}
+
+.table-event {
+  border: solid black 1px;
+  position: absolute;
+  margin: 2%;
+  width: 50%;
+  height: 50%;
+  margin-top: 30%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.table-event img {
+  width: 50%;
+  margin: 1%;
+}
+
+.btn-delete {
+  position: relative;
+  width: 5%;
+  margin-bottom: 50%;
+}
+
+.btn-edit {
+  display: flex;
+  width: 10%;
+  background: #EB4603;
+  border: #EB4603;
 }
 
 body {
