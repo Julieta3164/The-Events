@@ -1821,7 +1821,7 @@ input::placeholder, textarea::placeholder {
   flex-direction: row-reverse;
 }
 .table-event img {
-  width: 10%;
+  width: 50%;
   margin: 1%;
 }
 
