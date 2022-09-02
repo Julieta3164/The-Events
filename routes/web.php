@@ -32,7 +32,7 @@ Route::middleware(['admin'])->group(function () {
     })->middleware(['admin'])->name('create');
 
     Route::get('/events', function () {
-        return view('events');
+        return view('events.events');
     })->middleware(['admin'])
         ->name('events');
 
@@ -40,12 +40,10 @@ Route::middleware(['admin'])->group(function () {
         return view('events.edit');
     })->middleware(['admin'])
     ->name('events.edit');
-    
-    Route::resource('/events', EventController::class);  
+        
+    Route::resource('/events', EventController::class);
     
 });
-
-Route::get('/description', [Description::class, 'index']);
     
 Route::get('/dashboard', function () {
     return view('dashboard');

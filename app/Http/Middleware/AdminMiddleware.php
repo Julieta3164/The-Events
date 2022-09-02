@@ -22,7 +22,7 @@ class AdminMiddleware
             return $next($request);
         }
 
-        return abort(403, sprintf('User does not have %s role', $role));
+        return abort(403, sprintf('User does not have permission'));
     }
 
 }
