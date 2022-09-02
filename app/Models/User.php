@@ -11,7 +11,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use Notifiable, UserTrait;
+    use Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -45,7 +45,7 @@ class User extends Authenticatable
         return $this->belongsToMany(Role::class);
     
     }
-    
+
     public function events(){
         return $this->belongsToMany(Event::class);
     }

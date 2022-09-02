@@ -17,6 +17,6 @@ class AdminViewController extends Controller
 
     public function index(){
 
-        return \view ('adminview');
+        return view ('adminview','events/create','events','event/edit');
         }
 }
