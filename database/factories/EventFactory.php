@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class RoleFactory extends Factory
+class EventFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,7 +14,12 @@ class RoleFactory extends Factory
     public function definition()
     {
         return [
-            'role',
+            'title',
+            'image',
+            'description',
+            'time',
+            'date',
+            'people',
         ];
     }
 }

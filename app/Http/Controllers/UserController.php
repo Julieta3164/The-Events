@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\User as ModelsUser;
+use Illuminate\Support\Facades\Gate;
 
 class UserController extends Controller
 {
+    public function index()
+    {
 
+    }
 }

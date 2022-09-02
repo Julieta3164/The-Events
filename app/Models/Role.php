@@ -14,12 +14,15 @@ class Role extends Model
      *
      * @var array<int, string>
      */
-    protected $fillable = ['role'];
+    protected $fillable = [
+        'name', 'slug', 'description', 'full-access',
+    ];
+
     public $timestamps = false;
 
 
     public function users(){
-        return $this->belongsToMany(User::class, 'role_user', 'roles_id', 'users_id');
+        return $this->belongsToMany(User::class);
     }
 
 }

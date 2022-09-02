@@ -16,5 +16,4 @@ mix.js('resources/js/app.js', 'public/js').sass('resources/sass/app.scss', 'publ
     require('tailwindcss'),
     require('autoprefixer'),
 ]);
-
 /* mix.sass('resources/sass/app.scss', 'public/css' )  */
