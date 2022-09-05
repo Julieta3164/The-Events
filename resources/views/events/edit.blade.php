@@ -1,80 +1,88 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Eventos') }}
-        </h2>
-    </x-slot>
+<x-header/>
 
-    <div class="py-12">
-        <div class="max-w-5xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
 
-                    @if ($errors->any())
-                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 mb-4 rounded relative" role="alert">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                    @endif
 
-                    <form method="POST" action="{{route('events.update', $event)}}" enctype="multipart/form-data">
-                        @csrf
-                        @method('PUT')
-                        <div>
-                            <x-label for="title" :value="__('Title')" />
 
-                                <span>$ </span><x-input id="title" class="block mt-1 w-full" type="text" name="title" :value="old('title') ?? $event->title" required />
-                        </div>
+<div  class="conten-edit">
 
-                        <div class="mt-4 grid grid-flow-col grid-rows-1 grid-cols-2">
-                            {{-- <div>
-                                <x-label for="price" :value="__('Image')" />
-                                <span>$ </span><x-input id="image" class="mt-1 w-24" type="text" name="image" :value="old('image') ?? $product->image" required />
-                            </div> --}}
-                            <div>
-                                <x-label for="price" :value="__('Description')" />
+{{--     @if ($errors->any())
+    <div class="msj-eror" role="alert">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif --}}
 
-                                <span>$ </span><x-input id="description" class="mt-1 w-24" type="text" name="description" :value="old('description') ?? $event->description" required />
-                            </div>
-                            <div>
-                                <x-label for="price" :value="__('Date')" />
+    <form method="POST" action="{{route('events.update', $event)}}" enctype="multipart/form-data">
+        @csrf
+        @method('PUT')
 
-                                <span>$ </span><x-input id="date" class="mt-1 w-24" type="text" name="date" :value="old('date') ?? $event->date" required />
-                            </div>
-                           <div>
-                                <x-label for="price" :value="__('Time')" />
+        <div class="title-edit">
+            <x-label for="title" :value="__('')" />
+            <span class="text-title">Editar Titulo del Curso </span>
 
-                                <span>$ </span><x-input id="time" class="mt-1 w-24" type="text" name="time" :value="old('time') ?? $event->time" required />
-                            </div>
-                            <div>
-                                <x-label for="price" :value="__('People')" />
+            <x-input id="title" class="input-tilte-edit" type="text" name="title" :value="old('title') ?? $event->title" required />
+        </div>
 
-                                <span>$ </span><x-input id="people" class="mt-1 w-24" type="text" name="people" :value="old('people') ?? $event->people" required />
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="file" name="file" class="form-control">
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <img src="{{ old('image') ?? $event->image }}" />
-                                </div>
-                            </div>
 
-                            <div class="my-auto">
-                                <button class="ml-3 float-right">
-                                    {{ __('Actualizar') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+    <div class="descrip-edit">
+
+        <div class="text-des-edit">
+            <x-label for="price" :value="__('')" />
+            <span>Descripción:</span><x-input id="description" class="mt-1 w-24" type="text" name="description" :value="old('description') ?? $event->description" required />
+        </div>
+
+        <div class="text-des-edit">
+            <x-label for="price" :value="__('')" />
+            <span>Fecha:</span><x-input id="date" class="mt-1 w-24" type="text" name="date" :value="old('date') ?? $event->date" required />
+        </div>
+
+        <div class="text-des-edit">
+            <x-label for="price" :value="__('')" />
+            <span>Hora:</span><x-input id="time" class="mt-1 w-24" type="text" name="time" :value="old('time') ?? $event->time" required />
+        </div>
+
+        <div class="text-des-edit">
+            <x-label for="price" :value="__('')" />
+            <span>Plazas:</span><x-input id="people" class="mt-1 w-24" type="text" name="people" :value="old('people') ?? $event->people" required />
         </div>
     </div>
 
-</x-app-layout>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="file" name="file" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{{ old('image') ?? $event->image }}" />
+                </div>
+            </div>
+
+            <div class="my-auto">
+                <button class="ml-3 float-right">
+                    {{ __('Actualizar') }}
+                </button>
+            </div>
+        
+    </form>
+
+
+
+                    
+                    
+
+
+
+
+
+
+
+
+
+
+</div>

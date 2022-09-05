@@ -1,0 +1,40 @@
+.conten-edit{
+    margin-top: 15%;
+    position: absolute;
+    width: 98%;
+    display: flex;
+    justify-content: center;
+}
+
+.title-edit{
+    display: flex;
+    font-size: 50px;
+    text-align: center;
+    flex-direction: column;
+
+    .text-title{
+        margin: 1%;
+    }
+
+    .input-tilte-edit{
+        border: 2px solid #EB4603;;
+        margin: 1%;
+        padding: 1%
+    }
+}
+
+
+
+.descrip-edit{
+    background: #F8E358;
+    .text-des-edit{
+        margin: 1%;
+    }
+    input{
+        width: 50%;
+        border: 2px solid #EB4603;;
+        margin: 1%;
+        padding: 15px;
+    }
+}
+
