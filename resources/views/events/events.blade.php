@@ -2,8 +2,17 @@
 <x-buttonevents/>
 
 <div class="conten-events">
+  
+{{--   <div class="btn-clear">
+    <form   action="{{ route('events.destroy',$event->id) }}" method="POST">
+      <button type="submit" class="btn-delete"><i class="bi bi-trash"></i></button>
+        @csrf
+        @method('DELETE')
+      </form>
+  </div> --}}
+
       @foreach ($event as $event)
-  <div class="img-card ">
+  <div class="img-card2">
         <div class="img-events">
         <img src="{{ asset('./img/cons.jpg') }}" class="card-img-top" alt="...">
         </div>
@@ -15,12 +24,6 @@
 
 
 
-{{-- <form   action="{{ route('events.destroy',$event->id) }}" method="POST">
-        <button type="submit" class="btn-delete"><i class="bi bi-trash"></i></button>
-          @csrf
-          @method('DELETE')
-      </form>  --}}
-
      
 
 
@@ -29,5 +32,7 @@
                     
       @endforeach
 </div>
+
+
 
 
