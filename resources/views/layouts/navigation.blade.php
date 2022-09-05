@@ -30,15 +30,7 @@
 
                     <x-slot name="content">
                         <!-- Authentication -->
-                        <form method="GET" action="">
-                            @csrf
-                            
-                            <x-dropdown-link :href="route('events')"
-                                    onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Panel Administrador') }}
-                            </x-dropdown-link>
-                        </form>
+                        
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             

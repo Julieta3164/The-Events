@@ -1,4 +1,18 @@
 <x-constructionpage/>
-<footer>
-    <h5>Esta es la create page</h5>
-</footer>
+<x-header/>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<x-create/>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<x-footer/>
