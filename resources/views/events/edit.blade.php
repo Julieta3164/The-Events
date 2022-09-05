@@ -20,7 +20,7 @@
                     </div>
                     @endif
 
-                    <form method="POST" action="{{route('events.update', $event)}}">
+                    <form method="POST" action="{{route('events.update', $event)}}" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div>
@@ -32,7 +32,6 @@
                         <div class="mt-4 grid grid-flow-col grid-rows-1 grid-cols-2">
                             {{-- <div>
                                 <x-label for="price" :value="__('Image')" />
-
                                 <span>$ </span><x-input id="image" class="mt-1 w-24" type="text" name="image" :value="old('image') ?? $product->image" required />
                             </div> --}}
                             <div>
@@ -55,6 +54,17 @@
 
                                 <span>$ </span><x-input id="people" class="mt-1 w-24" type="text" name="people" :value="old('people') ?? $event->people" required />
                             </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="file" name="file" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img src="{{ old('image') ?? $event->image }}" />
+                                </div>
+                            </div>
+
                             <div class="my-auto">
                                 <button class="ml-3 float-right">
                                     {{ __('Actualizar') }}
