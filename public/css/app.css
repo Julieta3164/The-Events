@@ -1845,10 +1845,6 @@ input::placeholder, textarea::placeholder {
   margin-right: 5%;
 }
 
-form {
-  border: solid black 1px;
-}
-
 body {
   margin: 1%;
 }
