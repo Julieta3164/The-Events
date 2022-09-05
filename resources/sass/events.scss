@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .conten-events{
     margin-top: 20%;
     display: flex;
@@ -39,3 +40,35 @@
         }
     }
 }
+=======
+.table-event{
+    border: solid black 1px;
+    position: absolute;
+    margin: 2%;
+    width: 50%;
+    height: 50%;
+    margin-top: 30%;
+    display: flex;
+    flex-direction: row-reverse;
+    img{
+        width: 50%;
+        margin: 1%;
+    }
+}
+
+.btn-delete{
+    position: relative;
+    width:5% ;
+    margin-bottom: 50%;
+    
+}
+
+
+
+.btn-edit{
+    display: flex;
+    width: 10%;
+    background: #EB4603;
+    border: #EB4603;
+}
+>>>>>>> mod_routes

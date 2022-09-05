@@ -14,7 +14,7 @@
       @foreach ($event as $event)
   <div class="img-card2">
         <div class="img-events">
-        <img src="{{ asset('./img/cons.jpg') }}" class="card-img-top" alt="...">
+        <img src="{{$event->image}}" class="card-img-top" alt="...">
         </div>
         <div class="btn-edit-event">
           <a  href="/events/{{$event->id}}/edit"> <i class="bi bi-pencil"></i> Editar</a>

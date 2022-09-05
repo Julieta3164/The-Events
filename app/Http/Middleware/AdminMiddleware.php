@@ -17,15 +17,12 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::check())
-        {
-            if(Auth::role()->role == 1) {
-                return $next($request);
-            }
-
-            else {
-                return redirect('/');
-            }
+        $role = $request->user()->roles[0]->name;
+        if ( $role ==='Admin') {
+            return $next($request);
         }
+
+        return abort(403, sprintf('User does not have permission'));
     }
+
 }
