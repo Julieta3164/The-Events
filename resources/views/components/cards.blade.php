@@ -26,7 +26,7 @@
     </div>
         <div class="button-cards">
         <a href="{{ url('/description') }}" class="btn btn-primary btn-primary1">Mas Información</a>
-        <a href="#" class="btn btn-primary btn-primary2">Solicitar Plaza</a>
+        <a href="" class="btn btn-primary btn-primary2">Solicitar Plaza</a>
     </div>
         </div>
     </div>

@@ -24,6 +24,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');  
 
+Route::put('/description', [EventController::class, 'add'])->name("events.add");
+
 Route::get('/', function () {
     return view('home');
 });

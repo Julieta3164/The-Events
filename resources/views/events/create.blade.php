@@ -1,4 +1,4 @@
-{{-- <x-header/> --}}
+<x-header/>
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -12,7 +12,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
 
-                    @if($errors->any())
+                    {{-- @if($errors->any())
                         <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 mb-4 rounded relative"
                             role="alert">
                             <ul>
@@ -21,7 +21,7 @@
                                 @endforeach
                             </ul>
                         </div>
-                    @endif
+                    @endif --}}
 
                     <form action="{{ route('events.save') }}" method="POST" enctype="multipart/form-data">
                         @csrf
