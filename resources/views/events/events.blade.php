@@ -7,7 +7,7 @@
     
 
     
-        <img src="{{ asset('./img/cons.jpg') }}" class="card-img-top" alt="...">
+        <img src="{{$events->image }}" class="card-img-top" alt="...">
 
 
         <form   action="{{ route('events.destroy',['id'=>$events->id]) }}" method="POST">
