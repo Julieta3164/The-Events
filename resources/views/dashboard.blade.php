@@ -22,7 +22,7 @@
 <br>
 <br>
 <br>
-<x-cards/>
+<x-cards :event="$event"/>
 <br>
 <br>
 <br>
