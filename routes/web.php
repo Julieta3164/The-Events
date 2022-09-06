@@ -6,9 +6,8 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\EditController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
-
-    
 Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::get('/events', [EventController::class, 'index' ]);
     Route::post('/events', [EventController::class, 'save' ])->name('events.save');
@@ -29,6 +28,7 @@ Route::get('/dashboard', function () {
 
 Route::get('/', [HomeController::class, 'home' ])->name("home");
 /* Route::get('/', [HomeController::class, 'imagenes' ])->name("imagenes"); */
+Route::get('/dashboard', [DashboardController::class, 'dashboard' ])->name("dashboard");
 
 require __DIR__.'/auth.php';
 
