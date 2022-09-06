@@ -7,7 +7,7 @@
 <br>
 <br>
 <br>
-<x-carousel/>
+<x-carousel :event="$event"/>
 <br>
 <br>
 <br>
@@ -16,4 +16,5 @@
 <br>
 <br>
 <br>
+<x-footer/>
 

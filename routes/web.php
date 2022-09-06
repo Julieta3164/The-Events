@@ -28,7 +28,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');  
 
 Route::get('/', [HomeController::class, 'home' ])->name("home");
-Route::get('/', [HomeController::class, 'imagenes' ])->name("imagenes");
+/* Route::get('/', [HomeController::class, 'imagenes' ])->name("imagenes"); */
 
 require __DIR__.'/auth.php';
 
