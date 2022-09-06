@@ -24,6 +24,36 @@
 }
 
 
+.conten2{
+    border:black 2px solid;
+    display: flex;
+    width: 95%;
+    justify-content: space-around;
+    .descrip-edit2{
+        display: flex;
+        border: black 2px solid;
+        width: 45%;
+        flex-direction: column;
+        justify-content: space-between;
+        .btn-img{
+            border:black 2px solid;
+        }
+        .img-edit{
+            border:black 2px solid;
+            width: 40%;
+            img{
+                border:black 2px solid;
+                width: 90%;
+            }
+        }
+    }
+    .descrip-edit{
+        width: 45%;
+        margin: 1%;;
+    }
+}
+
+
 
 .descrip-edit{
     background: #F8E358;

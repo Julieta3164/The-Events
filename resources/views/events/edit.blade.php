@@ -26,10 +26,21 @@
             <x-input id="title" class="input-tilte-edit" type="text" name="title" :value="old('title') ?? $event->title" required />
         </div>
 
+<div class="conten2">
+<div class="descrip-edit2">
 
-    <div class="descrip-edit">
+    <div class="img-edit">
+        <img src="{{ old('image') ?? $event->image }}" />
+    </div>
+    <div class="btn-img">
+            <input type="file" name="file" class="form-control">
+    </div> 
+        
+</div>
 
-        <div class="text-des-edit">
+<div class="descrip-edit">
+
+    <div class="text-des-edit">
             <x-label for="price" :value="__('')" />
             <span>Descripción:</span><x-input id="description" class="mt-1 w-24" type="text" name="description" :value="old('description') ?? $event->description" required />
         </div>
@@ -48,20 +59,11 @@
             <x-label for="price" :value="__('')" />
             <span>Plazas:</span><x-input id="people" class="mt-1 w-24" type="text" name="people" :value="old('people') ?? $event->people" required />
         </div>
-    </div>
+</div>
+
+</div>
 
 
-
-            <div class="row">
-                <div class="col-md-6">
-                    <input type="file" name="file" class="form-control">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="{{ old('image') ?? $event->image }}" />
-                </div>
-            </div>
 
             <div class="my-auto">
                 <button class="ml-3 float-right">

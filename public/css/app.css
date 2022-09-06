@@ -1906,6 +1906,35 @@ input::placeholder, textarea::placeholder {
   padding: 1%;
 }
 
+.conten2 {
+  border: black 2px solid;
+  display: flex;
+  width: 95%;
+  justify-content: space-around;
+}
+.conten2 .descrip-edit2 {
+  display: flex;
+  border: black 2px solid;
+  width: 45%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.conten2 .descrip-edit2 .btn-img {
+  border: black 2px solid;
+}
+.conten2 .descrip-edit2 .img-edit {
+  border: black 2px solid;
+  width: 40%;
+}
+.conten2 .descrip-edit2 .img-edit img {
+  border: black 2px solid;
+  width: 90%;
+}
+.conten2 .descrip-edit {
+  width: 45%;
+  margin: 1%;
+}
+
 .descrip-edit {
   background: #F8E358;
 }
