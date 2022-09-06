@@ -4,6 +4,7 @@ use App\Http\Controllers\CreateController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\EditController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -24,11 +25,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');  
 
-Route::put('/description', [EventController::class, 'add'])->name("events.add");
-
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, 'home' ])->name("home");
 
 
 require __DIR__.'/auth.php';
