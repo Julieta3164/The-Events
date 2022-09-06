@@ -1884,7 +1884,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .conten-edit {
-  margin-top: 10%;
+  margin-top: 15%;
   position: absolute;
   width: 90%;
   display: flex;
@@ -1984,6 +1984,82 @@ input::placeholder, textarea::placeholder {
   padding-left: 8%;
   padding-right: 8%;
   margin-right: 14%;
+}
+
+.conten-create {
+  margin-top: 15%;
+  position: absolute;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+.conten-create form {
+  width: 85%;
+}
+
+.tile-create {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin: 1%;
+}
+.tile-create label {
+  font-size: 50px;
+}
+.tile-create .text-title-c {
+  margin: 1%;
+}
+.tile-create .input-tilte-create {
+  border: 1px solid #EB4603;
+  margin: 5px;
+  padding: 5px;
+}
+
+.principal-create {
+  border: black 2px solid;
+  display: flex;
+  justify-content: space-around;
+  height: 500px;
+  padding: 1%;
+}
+.principal-create .create-1 {
+  border: black 2px solid;
+  display: flex;
+  width: 45%;
+  height: 350px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.principal-create .create-1 .btn-img-c {
+  background: #EB4603;
+  margin-left: 15%;
+  width: 70%;
+}
+.principal-create .create-2 {
+  background: #F8E358;
+  border: black 2px solid;
+  display: flex;
+  width: 45%;
+  height: 350px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.principal-create .create-2 .text-c {
+  font-weight: bold;
+  margin: 1%;
+}
+.principal-create .create-2 .input-create {
+  border: 1px solid #EB4603;
+  margin: 5px;
+  padding: 5px;
+}
+
+.input-create2 input {
+  width: 75%;
+  height: 170px;
+  border: 1px solid #EB4603;
+  margin: 1px;
+  padding: 5px;
 }
 
 body {
