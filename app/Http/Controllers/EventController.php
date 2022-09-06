@@ -11,7 +11,7 @@ class EventController extends Controller
 
     public function index(Request $request)
     {
-        $events = Event::all()->sortByDesc("id");;
+        $events = Event::all()->sortByDesc("id");
 
         return view('events.events')->with('event',$events);
     }
