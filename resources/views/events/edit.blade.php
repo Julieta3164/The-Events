@@ -1,10 +1,4 @@
 <x-header/>
-
-
-
-
-<div  class="conten-edit">
-
 {{--     @if ($errors->any())
     <div class="msj-eror" role="alert">
         <ul>
@@ -15,32 +9,37 @@
     </div>
     @endif --}}
 
+
+
+
+<div  class="conten-edit">
+
     <form method="POST" action="{{route('events.update', $event)}}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
+
         <div class="title-edit">
             <x-label for="title" :value="__('')" />
             <span class="text-title">Editar Titulo del Curso </span>
-
             <x-input id="title" class="input-tilte-edit" type="text" name="title" :value="old('title') ?? $event->title" required />
         </div>
 
-<div class="conten2">
-<div class="descrip-edit2">
+        <div class="conten2">
+            <div class="descrip-edit2">
+            <div class="img-edit">
+            <img src="{{ old('image') ?? $event->image }}" />
+            </div>
 
-    <div class="img-edit">
-        <img src="{{ old('image') ?? $event->image }}" />
-    </div>
-    <div class="btn-img">
+            <div class="btn-img">
             <input type="file" name="file" class="form-control">
-    </div> 
-        
-</div>
+            </div> 
+        </div>
+
 
 <div class="descrip-edit">
 
-    <div class="text-des-edit">
+        <div class="text-des-edit text-des-edit2">
             <x-label for="price" :value="__('')" />
             <span>Descripción:</span><x-input id="description" class="mt-1 w-24" type="text" name="description" :value="old('description') ?? $event->description" required />
         </div>
@@ -63,28 +62,14 @@
 
 </div>
 
+<div class="btn-act">
+    <button class="btn-A">
+        {{ __('Actualizar') }}
+    </button>
+</div>
 
-
-            <div class="my-auto">
-                <button class="ml-3 float-right">
-                    {{ __('Actualizar') }}
-                </button>
-            </div>
-        
-    </form>
-
-
-
-                    
-                    
-
-
-
-
-
-
-
-
+</form>
 
 
 </div>
+
