@@ -2016,14 +2016,12 @@ input::placeholder, textarea::placeholder {
 }
 
 .principal-create {
-  border: black 2px solid;
   display: flex;
   justify-content: space-around;
   height: 500px;
   padding: 1%;
 }
 .principal-create .create-1 {
-  border: black 2px solid;
   display: flex;
   width: 45%;
   height: 460px;
@@ -2037,7 +2035,6 @@ input::placeholder, textarea::placeholder {
 }
 .principal-create .create-2 {
   background: #F8E358;
-  border: black 2px solid;
   display: flex;
   width: 45%;
   height: 460px;
