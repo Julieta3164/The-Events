@@ -3,7 +3,7 @@
   <div class="card card-home" style="width: 18rem;">
 
     <div class="img-card">
-       <img src="{{$events->image}}" class="card-img-top" alt="...">
+    <img src="{{$events->image}}" class="card-img-top" alt="...">
     </div>
 
     <div class="card-body">

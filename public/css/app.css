@@ -97,6 +97,8 @@
 .contenedor-cartas {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  width: 98%;
 }
 
 .img-card {
@@ -106,6 +108,7 @@
 }
 .img-card img {
   width: 80%;
+  height: 200px;
 }
 
 .card-title2 {
