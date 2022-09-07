@@ -94,6 +94,25 @@
   text-decoration: none;
 }
 
+.btn-CS:hover {
+  width: 10%;
+  position: relative;
+  left: 1300px;
+  padding-top: 4%;
+  flex-direction: row-reverse;
+  text-align: center;
+  color: white;
+}
+.btn-CS:hover p:hover {
+  background: #EB4603;
+}
+.btn-CS:hover form:hover {
+  background: #EB4603;
+}
+.btn-CS:hover a:hover {
+  background: #EB4603;
+}
+
 .contenedor-cartas {
   display: flex;
   flex-wrap: wrap;
@@ -109,7 +128,8 @@
 }
 .img-card img {
   width: 80%;
-  height: 200px;
+  height: 250px;
+  margin: 2%;
 }
 
 .card-title2 {

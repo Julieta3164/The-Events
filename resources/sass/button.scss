@@ -74,3 +74,22 @@
         text-decoration: none;
     }
 }
+
+.btn-CS:hover{
+    width: 10%;
+    position: relative;
+    left: 1300px;
+    padding-top: 4%;
+    flex-direction: row-reverse;
+    text-align: center;
+    color: white;
+    p:hover{
+        background:#EB4603;
+    }
+    form:hover{
+        background:#EB4603;
+    }
+    a:hover{
+        background:#EB4603;
+    }
+}
