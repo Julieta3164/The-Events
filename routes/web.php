@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\CreateController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Description;
+use App\Http\Controllers\DescriptionController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\EditController;
 use App\Http\Controllers\HomeController;
@@ -27,6 +29,8 @@ Route::get('/dashboard', function () {
 Route::get('/', [HomeController::class, 'home' ])->name("home");
 /* Route::get('/', [HomeController::class, 'imagenes' ])->name("imagenes"); */
 Route::get('/dashboard', [DashboardController::class, 'dashboard' ])->name("dashboard");
+/* Route::get('/description', [DescriptionController::class, 'index' ])->name("description"); */
+Route::get('/description', [DescriptionController::class, 'description' ])->name("description");
 
 require __DIR__.'/auth.php';
 
