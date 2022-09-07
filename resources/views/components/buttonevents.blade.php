@@ -1,3 +1,4 @@
 
-    <a href="{{ url('/events/create') }}" class="btncreate">Crear</a>
+
+<a href="{{ url('/events/create') }}" class=" btn-primary3">Crear</a>
 

@@ -6,14 +6,15 @@ use Illuminate\View\Component;
 
 class carousel extends Component
 {
+    public $event;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct( $event)
     {
-        //
+        $this->event = $event;
     }
 
     /**

@@ -7,12 +7,12 @@
 <br>
 <br>
 <br>
-<x-carousel/>
+<x-carousel :event="$event"/>
 <br>
 <br>
 <br>
 <br>
-
+<x-cards :event="$event"/>
 <br>
 <div>
     @foreach ($event as $event)
@@ -44,3 +44,4 @@
 <br>
 <br>
 <x-footer/>
+

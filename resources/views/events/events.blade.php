@@ -1,13 +1,15 @@
 <x-header/>
 
 
-
-  <x-buttonevents/>
+  
 
 
 <div class="conten-events">
 
- 
+<div class="conte-btn-create">
+  <x-buttonevents/>
+</div>
+
       @foreach ($event as $events)
       <div class="card2">
         <div class="btn-delete">
@@ -17,7 +19,6 @@
           @method('DELETE')
         </form>
       </div> 
-
       <div class="img-card2">
         <img src="{{$events->image }}" class="card-img-top" alt="...">
       </div>
@@ -39,3 +40,6 @@
       @endforeach
 
     </div> 
+
+
+    
