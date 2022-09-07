@@ -12,8 +12,5 @@ class HomeController extends Controller
 
         return view('home')->with('event',$event);
     }
-/*     public function imagenes(Request $request){
-        $event = Event::all()->sortByDesc("id");
-        return view('components.carousel')->with('event',$event);
-    } */
+
  }
