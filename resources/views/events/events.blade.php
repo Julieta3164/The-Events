@@ -1,14 +1,4 @@
-{{-- <x-header/> --}}
-
-<form method="POST" action="{{ route('logout') }}">
-  @csrf
-
-  <x-responsive-nav-link :href="route('logout')"
-          onclick="event.preventDefault();
-                      this.closest('form').submit();">
-      <p>{{ __('Cerrar Sesión') }}</p>
-  </x-responsive-nav-link>
-</form>
+<x-header/>
 
 
 <div class="conten-events">
