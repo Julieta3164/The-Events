@@ -1,7 +1,4 @@
 <footer>
-    <div class="footer">
-  </div>
-
 
 <div class="conteiner">
 <div class="copy">
