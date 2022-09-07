@@ -29,38 +29,37 @@
                 </div>
 
                 <div class="create-2">
-                    <div>
+                    <div class="text-des-create text-des-create2">
                         <x-label for="price" :value="__('')" />
-                        <span class="text-c">Descrición:</span>
-                        <x-input id="description" class="input-create input-create2" type="text" name="description" :value="old('description')" required />
+                        <span>Descrición:</span>
+                        <x-input id="description"  type="text" name="description" :value="old('description')" required />
                     </div>
 
-                    <div>
+                    <div class="text-des-create">
                         <x-label for="price" :value="__('')" />
-                        <span class="text-c">Hora:</span>
-                        <x-input id="time" class="input-create" type="text" name="time" :value="old('time')" required />
+                        <span>Hora:</span>
+                        <x-input id="time"  type="text" name="time" :value="old('time')" required />
                     </div>
 
-                    <div>
+                    <div class="text-des-create">
                         <x-label for="price" :value="__('')" />
-                        <span class="text-c">Fecha:</span>
-                        <x-input id="date" class="input-create" type="text" name="date" :value="old('date')" required />
+                        <span>Fecha:</span>
+                        <x-input id="date"  type="text" name="date" :value="old('date')" required />
                     </div>
 
-                    <div>
+                    <div class="text-des-create">
                         <x-label for="price" :value="__('')" />
-                        <span class="text-c">Plazas:</span>
-                        <x-input id="people" class="input-create" type="text" name="people" :value="old('people')" required />
+                        <span>Plazas:</span>
+                        <x-input id="people"  type="text" name="people" :value="old('people')" required />
                     </div>
-
-
                 </div>
             </div>
 
-            <div class="my-auto">
-                <button class="ml-3 float-right">
+            <div class="btn-create">
+                <button class="btn-c">
                     {{ __('Guardar') }}
                 </button>
             </div>
+            
         </form>
     </div>
