@@ -49,3 +49,28 @@
 }
 
 
+.btn-CS{
+    width: 10%;
+    position: relative;
+    left: 1400px;
+    padding-top: 4%;
+    flex-direction: row-reverse;
+    text-align: center;
+    color: white;
+    p{
+        background:#EB4603;
+        color: white;
+        
+
+    }
+    form{
+        background:#EB4603;
+        color: white;
+    }
+   
+    a{
+        background:#EB4603;
+        color: white;
+        text-decoration: none;
+    }
+}
