@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="create-2">
-                    <div class="text-des-create">
+                    <div class="text-des-create text-des-create2">
                         <x-label for="price" :value="__('')" />
                         <span>Descrición:</span>
                         <x-input id="description"  type="text" name="description" :value="old('description')" required />
@@ -52,15 +52,14 @@
                         <span>Plazas:</span>
                         <x-input id="people"  type="text" name="people" :value="old('people')" required />
                     </div>
-
-
                 </div>
             </div>
 
-            <div class="my-auto">
-                <button class="ml-3 float-right">
+            <div class="btn-create">
+                <button class="btn-c">
                     {{ __('Guardar') }}
                 </button>
             </div>
+            
         </form>
     </div>

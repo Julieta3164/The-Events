@@ -70,7 +70,7 @@
             font-weight: bold;
             margin-right: 2%;
         }
-        .input-create{
+        input{
         width: 75%;
         border: 1px solid #EB4603;
         margin: 1px;
@@ -79,7 +79,7 @@
     }
 }
 
-.input-create2{
+.text-des-create2{
 
     input{
         width: 75%;
@@ -87,5 +87,19 @@
         border: 1px solid #EB4603;
         margin: 1px;
         padding: 5px;
+    }
+} 
+
+
+.btn-create{
+    display: flex;
+    flex-direction: row-reverse;
+    .btn-c{
+        background:  #EB4603;
+        color: white;
+        padding: 0.5%;
+        padding-left: 8%;
+        padding-right: 8%;
+        margin-right: 14%;
     }
 }
