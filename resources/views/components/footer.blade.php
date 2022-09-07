@@ -1,7 +1,4 @@
 <footer>
-    <div class="footer">
-  
-
 
 <div class="conteiner">
 <div class="copy">
@@ -20,6 +17,5 @@
     <i class="bi bi-twitter"></i>
   </div>
 
-</div>
 </div>
 </footer>
