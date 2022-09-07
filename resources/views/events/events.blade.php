@@ -1,16 +1,14 @@
-{{-- <x-header/> --}}
+<x-header/>
 
-
+<div class="btn-CS">
 <form method="POST" action="{{ route('logout') }}">
   @csrf
-
   <x-responsive-nav-link :href="route('logout')"
-          onclick="event.preventDefault();
-                      this.closest('form').submit();">
+          onclick="event.preventDefault(); this.closest('form').submit();">
       <p>{{ __('Cerrar Sesión') }}</p>
   </x-responsive-nav-link>
 </form>
-
+</div>
 
 <div class="conten-events">
 

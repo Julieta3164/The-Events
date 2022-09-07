@@ -71,6 +71,29 @@
     text-decoration: none;
   }
 }
+.btn-CS {
+  width: 10%;
+  position: relative;
+  left: 1400px;
+  padding-top: 4%;
+  flex-direction: row-reverse;
+  text-align: center;
+  color: white;
+}
+.btn-CS p {
+  background: #EB4603;
+  color: white;
+}
+.btn-CS form {
+  background: #EB4603;
+  color: white;
+}
+.btn-CS a {
+  background: #EB4603;
+  color: white;
+  text-decoration: none;
+}
+
 .img-card {
   display: flex;
   justify-content: center;
