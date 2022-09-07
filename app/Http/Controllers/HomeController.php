@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(){
+    public function home(Request $request){
+        $event = Event::all()->sortByDesc("id");
 
-        return view ('/');
-        }
-}
+        return view('home')->with('event',$event);
+    }
+/*     public function imagenes(Request $request){
+        $event = Event::all()->sortByDesc("id");
+        return view('components.carousel')->with('event',$event);
+    } */
+ }

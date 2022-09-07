@@ -1,4 +1,5 @@
 <x-header/>
+
 <x-app-layout>
 
 
@@ -8,7 +9,8 @@
     <br>
     <br>
     <br>
-    <x-carousel/>
+
+<x-carousel :event="$event"/> 
     <br>
     <br>
     <br>
@@ -20,7 +22,7 @@
 <br>
 <br>
 <br>
-<x-cards/>
+<x-cards :event="$event"/>
 <br>
 <br>
 <br>
