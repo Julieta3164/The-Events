@@ -24,9 +24,8 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');  
-
 Route::get('/', [HomeController::class, 'home' ])->name("home");
-
+Route::post('/events', [HomeController::class, 'add' ])->name('add');
 
 require __DIR__.'/auth.php';
 

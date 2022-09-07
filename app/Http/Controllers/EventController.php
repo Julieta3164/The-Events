@@ -89,10 +89,4 @@ class EventController extends Controller
         return redirect('/events');
     }
 
-    public function add(Request $request)
-    {
-        $event = Event::find();
-        $event->user()->attach($event);
-    }
-
 }

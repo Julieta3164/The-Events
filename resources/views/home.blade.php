@@ -35,7 +35,7 @@
     </div>
         <div class="button-cards">
         <a href="{{ url('/description') }}" class="btn btn-primary btn-primary1">Mas Información</a>
-        <a href="" class="btn btn-primary btn-primary2" method="POST">Solicitar Plaza</a>
+        <a href="{{ route('add',['id'=>$event->id]) }}" class="btn btn-primary btn-primary2" method="POST">Solicitar Plaza</a>
     </div>
         </div>
     </div>

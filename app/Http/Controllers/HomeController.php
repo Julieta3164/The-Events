@@ -10,6 +10,7 @@ class HomeController extends Controller
     public function home(Request $request){
         $event = Event::all()->sortByDesc("id");
 
-        return view('')->with('event',$event);
+        return view('home')->with('event',$event);
     }
+
  }
