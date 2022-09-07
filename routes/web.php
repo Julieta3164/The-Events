@@ -28,6 +28,8 @@ Route::get('/dashboard', function () {
 Route::get('/', [HomeController::class, 'home' ])->name("home");
 Route::get('/dashboard', [DashboardController::class, 'dashboard' ])->name("dashboard");
 Route::get('/description', [DescriptionController::class, 'description' ])->name("description");
+Route::get('/description/{id}', [DescriptionController::class, 'edit'])->name("description.edit");
+Route::put('/description/{id}', [DescriptionController::class, 'update' ])->name("description.update");
 
 require __DIR__.'/auth.php';
 

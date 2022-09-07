@@ -6,7 +6,7 @@
 <br>
 <br>
 <br>
-<x-descripcion :event="$event"/>
+<x-description :event="$event"/>
 <br>
 <br>
 <br>
