@@ -42,7 +42,7 @@
         border: black 2px solid;
         display: flex;
         width: 45%;
-        height: 350px;
+        height: 460px;
         flex-direction: column;
         justify-content: space-around;
         .btn-img-c{
@@ -51,6 +51,7 @@
             width: 70%;
         }
 
+
     }
 
     .create-2{
@@ -58,22 +59,28 @@
         border: black 2px solid;
         display: flex;
         width: 45%;
-        height: 350px;
+        height: 460px;
         flex-direction: column;
         justify-content: space-around;
-        .text-c{
+        .text-des-create{
             font-weight: bold;
-            margin: 1%;
+        margin: 1%;
+        }
+        span{
+            font-weight: bold;
+            margin-right: 2%;
         }
         .input-create{
-            border: 1px solid #EB4603;;
-            margin: 5px;
-            padding:5px;
+        width: 75%;
+        border: 1px solid #EB4603;
+        margin: 1px;
+        padding: 5px;
         }
     }
 }
 
 .input-create2{
+
     input{
         width: 75%;
         height: 170px;

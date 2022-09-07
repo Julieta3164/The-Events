@@ -2026,7 +2026,7 @@ input::placeholder, textarea::placeholder {
   border: black 2px solid;
   display: flex;
   width: 45%;
-  height: 350px;
+  height: 460px;
   flex-direction: column;
   justify-content: space-around;
 }
@@ -2040,17 +2040,22 @@ input::placeholder, textarea::placeholder {
   border: black 2px solid;
   display: flex;
   width: 45%;
-  height: 350px;
+  height: 460px;
   flex-direction: column;
   justify-content: space-around;
 }
-.principal-create .create-2 .text-c {
+.principal-create .create-2 .text-des-create {
   font-weight: bold;
   margin: 1%;
 }
+.principal-create .create-2 span {
+  font-weight: bold;
+  margin-right: 2%;
+}
 .principal-create .create-2 .input-create {
+  width: 75%;
   border: 1px solid #EB4603;
-  margin: 5px;
+  margin: 1px;
   padding: 5px;
 }
 
