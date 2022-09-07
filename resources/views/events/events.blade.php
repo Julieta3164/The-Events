@@ -17,7 +17,7 @@
 </div>
 
       @foreach ($event as $events)
-      <div class="card2">
+      <div class="card card-home card2" style="width: 18rem;">
         <div class="btn-delete">
         <form   action="{{ route('events.destroy',['id'=>$events->id]) }}" method="POST">
           <button type="submit" class="btn-delete"><i class="bi bi-trash"></i></button>

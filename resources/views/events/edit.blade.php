@@ -1,16 +1,4 @@
 <x-header/>
-{{--     @if ($errors->any())
-    <div class="msj-eror" role="alert">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif --}}
-
-
-
 
 <div  class="conten-edit">
 

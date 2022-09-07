@@ -21,15 +21,12 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
     Route::put('/events/{id}/edit', [EventController::class, 'update'])->name("events.update");
 });
         
-/* Route::resource('dashboard', DashboardController::class)->middleware(['auth']);  */ 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');  
 
 Route::get('/', [HomeController::class, 'home' ])->name("home");
-/* Route::get('/', [HomeController::class, 'imagenes' ])->name("imagenes"); */
 Route::get('/dashboard', [DashboardController::class, 'dashboard' ])->name("dashboard");
-/* Route::get('/description', [DescriptionController::class, 'index' ])->name("description"); */
 Route::get('/description', [DescriptionController::class, 'description' ])->name("description");
 
 require __DIR__.'/auth.php';
