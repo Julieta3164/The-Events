@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 <div>
     @foreach ($event as $events)
     <div class="card card-home" style="width: 18rem;">
@@ -37,4 +34,3 @@
     </div>
     @endforeach
 </div>
->>>>>>> marta3
