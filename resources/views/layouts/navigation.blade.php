@@ -36,7 +36,7 @@
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                {{ __('Cerrar Sesión') }}
+                                <p>{{ __('Cerrar Sesión') }}</p>
                             </x-dropdown-link>
                         </form>
                     </x-slot>
@@ -78,7 +78,7 @@
                     <x-responsive-nav-link :href="route('logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
-                        {{ __('Cerrar Sesión') }}
+                        <p>{{ __('Cerrar Sesión') }}</p>
                     </x-responsive-nav-link>
                 </form>
             </div>
