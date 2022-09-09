@@ -7,7 +7,7 @@
 
 
         <button  type="button" class="btn btn-danger btn-sm me-md-2 ">
-            <a href="{{ route('login') }}">Inicia Sesión</a>
+            <a href="{{ route('login') }}">Inicia Sección</a>
         </button>
 
             @if (Route::has('register'))
