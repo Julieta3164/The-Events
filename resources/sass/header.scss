@@ -1,0 +1,40 @@
+.cabecera{
+    position: absolute;
+    width: 98%;
+    height: 200px;
+    margin-bottom: 2%;
+    background-image: url('/img/header.png');
+}
+
+.logo{
+    position: relative;
+    img{
+        position: absolute;
+        width: 15vh;
+        margin-top: 2%;
+        margin-left: 2%;
+    }
+}
+
+
+@media  (max-width: 600px){
+    .cabecera{
+        position: absolute;
+        width:98%;
+        height: 100px;
+        overflow: hidden;
+    }
+    
+    .logo{
+        position: relative;
+        img{
+            position: absolute;
+            width: 8vh;
+            padding-top: 4%;
+            padding-left: 2%;
+
+        }
+    }
+}
+
+

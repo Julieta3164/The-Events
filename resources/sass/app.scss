@@ -1,0 +1,57 @@
+@import 'header';
+@import 'button';
+@import 'carousel';
+@import 'cards';
+@import 'footer';
+@import 'styletailwind';
+@import 'description';
+@import 'events';
+@import 'edit';
+@import 'create';
+
+body{
+    margin: 1%;
+}
+
+.menu-D{
+    position: relative;
+}
+
+
+
+.btn-registrar{
+    background:#EB4603;
+
+}
+.btn-registrar:hover{
+    background:#db2929;
+}
+
+
+
+
+
+
+.btn-init{
+    background:#EB4603;
+}
+.btn-init:hover{
+    background:#db2929;
+}
+
+
+
+
+
+    .btn-olvido{
+        background:#EB4603;
+    }
+    
+    .btn-olvido:hover{
+        background:#db2929;
+    }
+
+
+
+
+

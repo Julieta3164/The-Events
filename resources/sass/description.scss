@@ -1,0 +1,65 @@
+.title-description{
+    margin: 2%;
+    width: 90%;
+    margin-top: 4%;
+    h2{
+        font-size: 200%;
+        font-weight: bold;
+        text-align: center;
+    }
+}
+.description-container2{
+    
+    width: 90%;
+    display: flex;
+    margin-top: 10%;
+    margin: 2%;
+    justify-content: space-around;
+    padding: 2%;
+}
+.image-description{
+    width: 50%;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+
+    img{ 
+        width: 40%;
+    }
+}
+.text-description{
+    border: solid 2px #E88919;
+    padding: 1%;
+    width: 50%;
+    background: #F8E358;
+    h2{
+        font-weight: bold;
+        text-align: center;
+        margin: 1%;
+    }
+    p{
+        background: #F8E358;
+        margin: 1%;
+        font-size: 80%;     
+    }
+    .datos{
+        font-weight: bold;
+
+    }
+}
+.btn-description{
+    display: flex; 
+    justify-content: end;
+    width: 90%;
+    margin: 2%;
+.description-button{
+    border: solid 2px #E88919;
+    background: #E88919;
+    color:white;
+    text-align: center;
+    margin: 2%;
+    margin-right: 21%;
+    padding: 1%;
+
+}
+}

@@ -1,0 +1,102 @@
+.conten-create{
+    margin-top: 15%;
+    position: absolute;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    form{
+        width: 85%;
+    }
+}
+
+
+
+.tile-create{
+    display: flex;
+
+    text-align: center;
+    flex-direction: column;
+    margin: 1%;
+    label{
+        font-size: 50px;
+    }
+    .text-title-c{
+        margin: 1%;
+    }
+    .input-tilte-create{
+        border: 1px solid #EB4603;;
+        margin: 5px;
+        padding:5px;
+    }
+}
+
+
+.principal-create{
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+    padding: 1%;
+    
+    .create-1{
+        display: flex;
+        width: 45%;
+        height: 460px;
+        flex-direction: column;
+        justify-content: space-around;
+        .btn-img-c{
+            background: #EB4603;
+            margin-left: 15%;
+            width: 70%;
+        }
+
+
+    }
+
+    .create-2{
+        background: #F8E358;
+        display: flex;
+        width: 45%;
+        height: 460px;
+        flex-direction: column;
+        justify-content: space-around;
+        .text-des-create{
+            font-weight: bold;
+        margin: 1%;
+        }
+        span{
+            font-weight: bold;
+            margin-right: 2%;
+        }
+        input{
+        width: 75%;
+        border: 1px solid #EB4603;
+        margin: 1px;
+        padding: 5px;
+        }
+    }
+}
+
+.text-des-create2{
+
+    input{
+        width: 75%;
+        height: 170px;
+        border: 1px solid #EB4603;
+        margin: 1px;
+        padding: 5px;
+    }
+} 
+
+
+.btn-create{
+    display: flex;
+    flex-direction: row-reverse;
+    .btn-c{
+        background:  #EB4603;
+        color: white;
+        padding: 0.5%;
+        padding-left: 8%;
+        padding-right: 8%;
+        margin-right: 14%;
+    }
+}
